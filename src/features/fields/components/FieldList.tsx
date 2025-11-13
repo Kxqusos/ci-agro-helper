@@ -1,4 +1,5 @@
 "use client";
+import { MapPin } from "lucide-react";
 
 interface FieldData {
   id: string;
@@ -49,12 +50,12 @@ export default function FieldList({ fields, selectedField, onFieldSelect, onNewF
         ))}
         
         <div
-          className="flex-shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 2xl:w-48 3xl:w-52 p-2 sm:p-3 rounded-lg transition-all border-2 border-dashed border-[#2D4A62] flex flex-col items-center justify-center"
+          className="flex-shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 2xl:w-48 3xl:w-52 p-2 sm:p-3 rounded-lg transition-all border-2 border-dashed border-[#2D4A62] flex flex-col items-center justify-center cursor-pointer hover:border-[#8BA4B8] hover:bg-[#1A2E42] group"
           onClick={onNewField}
         >
-          <div className="text-[#8BA4B8] text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 3xl:text-4xl mb-1">+</div>
-          <div className="text-[#8BA4B8] text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 3xl:text-xl text-center">
-            Добавьте поле
+          <MapPin className="text-[#8BA4B8] group-hover:text-[#4ECDC4] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 3xl:w-14 3xl:h-14 mb-1 transition-colors" />
+          <div className="text-[#8BA4B8] group-hover:text-[#E8F4FF] text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 3xl:text-xl text-center transition-colors">
+            Создайте поля
           </div>
         </div>
       </div>

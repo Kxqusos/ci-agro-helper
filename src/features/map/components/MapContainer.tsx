@@ -358,12 +358,14 @@ const MapContainer = forwardRef<LeafletMapHandle, LeafletMapProps>(({ className,
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "&copy; OpenStreetMap contributors",
         }).addTo(map);
-        const russiaBorder = L.rectangle(russiaBounds, {
-          color: "#3388ff",
-          weight: 3,
-          fill: false,
-          opacity: 0.8
-        }).addTo(map);
+
+        // УДАЛЕНО: создание синего прямоугольника (границы России)
+        // const russiaBorder = L.rectangle(russiaBounds, {
+        //   color: "#3388ff",
+        //   weight: 3,
+        //   fill: false,
+        //   opacity: 0.8
+        // }).addTo(map);
 
         fetch("/russia_regions.geojson")
           .then((response) => response.json())

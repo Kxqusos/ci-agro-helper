@@ -983,18 +983,7 @@ export default function FieldModal({ isOpen, onClose, onSave, points, polygon, r
             </div>
           )}
 
-          <div>
-            <label className="block text-sm font-medium text-[#8BA4B8] mb-2">
-              История севооборота (что росло в предыдущие годы)
-            </label>
-            <textarea
-              value={formData.cropRotationHistory}
-              onChange={(e) => setFormData(prev => ({ ...prev, cropRotationHistory: e.target.value }))}
-              rows={3}
-              className="w-full px-3 py-2 bg-[#0F1F2F] border border-[#2D4A62] rounded-lg text-[#E8F4FF] placeholder-[#8BA4B8] focus:outline-none focus:border-[#3388ff] transition-colors"
-              placeholder="Например: 2023 - Пшеница, 2022 - Ячмень, 2021 - Рапс..."
-            />
-          </div>
+          
 
           <div className="bg-[#0F1F2F] rounded-lg p-4 border border-[#2D4A62]">
             <div className="flex items-center space-x-3 mb-3">
@@ -1236,7 +1225,7 @@ export default function FieldModal({ isOpen, onClose, onSave, points, polygon, r
 
           <div>
             <label className="block text-sm font-medium text-[#8BA4B8] mb-2">
-              Дополнительные заметки
+            Заметки
             </label>
             <textarea
               value={formData.notes}

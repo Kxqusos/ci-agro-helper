@@ -96,7 +96,7 @@ export default function SearchBar() {
           <div className="relative flex items-center w-full">
             <input
               type="text"
-              placeholder="Поиск города..."
+              placeholder="Поиск по карте..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyPress={handleKeyPress}

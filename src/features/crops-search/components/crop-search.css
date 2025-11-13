@@ -639,7 +639,7 @@
   .crop-title {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;// Моковые данные с привязкой к полям
+    gap: 8px;
   }
   
   .crop-title h2 {

@@ -6,9 +6,11 @@ import {
   Sprout,
   Calendar,
   Droplets,
-  Wrench
+  Wrench,
+  FileText
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 interface FieldInfoTabProps {
   fieldData?: {
@@ -20,7 +22,7 @@ interface FieldInfoTabProps {
     location: string;
     isActive: boolean;
     coordinates?: { lat: number; lng: number };
-    cropRotationHistory?: string;
+    notes?: string;
     plannedOperations?: Array<{
       type: string;
       date: string;
@@ -49,10 +51,13 @@ interface FieldInfoTabProps {
       potassium: number;
     };
   };
+  onNotesChange?: (notes: string) => void;
 }
 
-export default function FieldInfoTab({ fieldData }: FieldInfoTabProps) {
-  const [activeTab, setActiveTab] = useState<'overview' | 'soil' | 'operations' | 'history'>('overview');
+export default function FieldInfoTab({ fieldData, onNotesChange }: FieldInfoTabProps) {
+  const [activeTab, setActiveTab] = useState<'overview' | 'soil' | 'operations' | 'notes'>('overview');
+  const [notes, setNotes] = useState(fieldData?.notes || '');
+  const [isSaving, setIsSaving] = useState(false);
 
   if (!fieldData) {
     return (
@@ -97,6 +102,23 @@ export default function FieldInfoTab({ fieldData }: FieldInfoTabProps) {
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('ru-RU');
+  };
+
+  const handleNotesChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setNotes(e.target.value);
+  };
+
+  const handleSaveNotes = async () => {
+    if (onNotesChange) {
+      setIsSaving(true);
+      try {
+        await onNotesChange(notes);
+      } catch (error) {
+        console.error('Ошибка при сохранении заметок:', error);
+      } finally {
+        setIsSaving(false);
+      }
+    }
   };
 
   const OverviewTab = () => (
@@ -289,30 +311,63 @@ export default function FieldInfoTab({ fieldData }: FieldInfoTabProps) {
     </div>
   );
 
-  const HistoryTab = () => (
+const NotesTab = () => {
+  const [localNotes, setLocalNotes] = useState(fieldData?.notes || '');
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Инициализация при смене поля
+  useEffect(() => {
+    setLocalNotes(fieldData?.notes || '');
+  }, [fieldData?.name]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setLocalNotes(e.target.value);
+  };
+
+  const handleSave = async () => {
+    if (onNotesChange) {
+      setIsSaving(true);
+      try {
+        await onNotesChange(localNotes);
+      } catch (err) {
+        console.error('Ошибка при сохранении заметок:', err);
+      } finally {
+        setIsSaving(false);
+      }
+    }
+  };
+
+  return (
     <div className="space-y-4">
-      {fieldData.cropRotationHistory ? (
-        <div className="bg-[#1A2E42] p-4 rounded-lg border border-[#2D4A62]">
-          <div className="flex items-center mb-3">
-            <Crop className="w-4 h-4 mr-2 text-[#8BA4B8] flex-shrink-0" />
-            <div className="text-[#8BA4B8] text-sm font-medium truncate">
-              История севооборота
-            </div>
-          </div>
-          
-          <div className="text-sm text-[#E8F4FF] break-words leading-relaxed">
-            {fieldData.cropRotationHistory}
+      <div className="bg-[#1A2E42] p-4 rounded-lg border border-[#2D4A62]">
+        <div className="flex items-center mb-3">
+          <FileText className="w-4 h-4 mr-2 text-[#8BA4B8] flex-shrink-0" />
+          <div className="text-[#8BA4B8] text-sm font-medium truncate">
+            Заметки
           </div>
         </div>
-      ) : (
-        <div className="bg-[#1A2E42] p-6 rounded-lg border border-[#2D4A62] text-center">
-          <div className="text-[#8BA4B8] text-sm">
-            История севооборота не указана
-          </div>
-        </div>
-      )}
+
+        <textarea
+          value={localNotes}
+          onChange={handleChange}
+          placeholder="Введите ваши заметки о поле..."
+          className="w-full h-80 p-3 bg-[#2D4A62] rounded border border-[#3A5A7A] text-[#E8F4FF] text-sm placeholder-[#8BA4B8] resize-y focus:outline-none focus:border-[#4ECDC4] transition-colors"
+        />
+
+<div className="flex justify-end items-center mt-3">
+  <button
+    onClick={handleSave}
+    disabled={isSaving}
+    className="px-4 py-2 bg-[#2ac334] text-[#1A2E42] text-sm font-medium rounded hover:bg-[#6BD472] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+  >
+    {isSaving ? 'Сохранение...' : 'Сохранить'}
+  </button>
+</div>
+      </div>
     </div>
   );
+};
+
 
   return (
     <div className="text-[#E8F4FF] h-full flex flex-col pb-4">
@@ -350,13 +405,13 @@ export default function FieldInfoTab({ fieldData }: FieldInfoTabProps) {
             Работы
           </button>
           <button
-            onClick={() => setActiveTab('history')}
+            onClick={() => setActiveTab('notes')}
             className={`flex items-center flex-shrink-0 pb-2 px-3 text-xs sm:text-sm font-medium transition-colors ${
-              activeTab === 'history' ? "text-[#7AE582] border-b-2 border-[#7AE582]" : "text-[#8BA4B8] hover:text-[#7AE582]"
+              activeTab === 'notes' ? "text-[#7AE582] border-b-2 border-[#7AE582]" : "text-[#8BA4B8] hover:text-[#7AE582]"
             }`}
           >
-            <Crop size={16} className="mr-1 sm:mr-2" />
-            История
+            <FileText size={16} className="mr-1 sm:mr-2" />
+            Заметки
           </button>
         </div>
       </div>
@@ -365,7 +420,7 @@ export default function FieldInfoTab({ fieldData }: FieldInfoTabProps) {
         {activeTab === 'overview' && <OverviewTab />}
         {activeTab === 'soil' && <SoilTab />}
         {activeTab === 'operations' && <OperationsTab />}
-        {activeTab === 'history' && <HistoryTab />}
+        {activeTab === 'notes' && <NotesTab />}
       </div>
     </div>
   );

@@ -117,52 +117,56 @@ const MapContainer = forwardRef<LeafletMapHandle, LeafletMapProps>(({ className,
       
       return found;
     },
-    findRegionForPoint: (lat: number, lng: number) => {
-      if (!russiaGeoJsonRef.current || !LRef.current) return null;
+   findRegionForPoint: (lat: number, lng: number) => {
+  if (!russiaGeoJsonRef.current || !LRef.current) return null;
+  
+  const point = LRef.current.latLng(lat, lng);
+  let foundRegion: any = null;
+  
+  console.log("🔍 Поиск региона для точки:", lat, lng);
+  
+  const pointInPolygon = (point: any, coordinates: number[][][]): boolean => {
+    const [lng, lat] = [point.lng, point.lat];
+    let inside = false;
+    
+    const outerRing = coordinates[0];
+    if (!outerRing || outerRing.length < 3) return false;
+    
+    for (let i = 0, j = outerRing.length - 1; i < outerRing.length; j = i++) {
+      const [xi, yi] = [outerRing[i][0], outerRing[i][1]];
+      const [xj, yj] = [outerRing[j][0], outerRing[j][1]];
       
-      const point = LRef.current.latLng(lat, lng);
-      let foundRegion: any = null;
-      
-      const pointInPolygon = (point: any, coordinates: number[][][]): boolean => {
-        const [lng, lat] = [point.lng, point.lat];
-        let inside = false;
+      const intersect = ((yi > lat) !== (yj > lat)) && 
+                       (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
+      if (intersect) inside = !inside;
+    }
+    
+    if (inside && coordinates.length > 1) {
+      for (let holeIdx = 1; holeIdx < coordinates.length; holeIdx++) {
+        const hole = coordinates[holeIdx];
+        let inHole = false;
         
-        const outerRing = coordinates[0];
-        if (!outerRing || outerRing.length < 3) return false;
-        
-        for (let i = 0, j = outerRing.length - 1; i < outerRing.length; j = i++) {
-          const [xi, yi] = [outerRing[i][0], outerRing[i][1]];
-          const [xj, yj] = [outerRing[j][0], outerRing[j][1]];
+        for (let i = 0, j = hole.length - 1; i < hole.length; j = i++) {
+          const [xi, yi] = [hole[i][0], hole[i][1]];
+          const [xj, yj] = [hole[j][0], hole[j][1]];
           
           const intersect = ((yi > lat) !== (yj > lat)) && 
                            (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
-          if (intersect) inside = !inside;
+          if (intersect) inHole = !inHole;
         }
         
-        if (inside && coordinates.length > 1) {
-          for (let holeIdx = 1; holeIdx < coordinates.length; holeIdx++) {
-            const hole = coordinates[holeIdx];
-            let inHole = false;
-            
-            for (let i = 0, j = hole.length - 1; i < hole.length; j = i++) {
-              const [xi, yi] = [hole[i][0], hole[i][1]];
-              const [xj, yj] = [hole[j][0], hole[j][1]];
-              
-              const intersect = ((yi > lat) !== (yj > lat)) && 
-                               (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
-              if (intersect) inHole = !inHole;
-            }
-            
-            if (inHole) {
-              inside = false;
-              break;
-            }
-          }
+        if (inHole) {
+          inside = false;
+          break;
         }
-        
-        return inside;
-      };
+      }
+    }
+    
+    return inside;
+  };
       
+
+  
       russiaGeoJsonRef.current.eachLayer((layer: any) => {
         if (foundRegion) return;
         
@@ -222,8 +226,8 @@ const MapContainer = forwardRef<LeafletMapHandle, LeafletMapProps>(({ className,
     clearRegionHighlight: () => {
       regionLayersRef.current.forEach((layer) => {
         layer.setStyle({
-          color: "#3388ff",
-          weight: 2,
+          color: "#666666",
+          weight: 1,
           fill: false,
           fillOpacity: 0,
         });
@@ -235,8 +239,8 @@ const MapContainer = forwardRef<LeafletMapHandle, LeafletMapProps>(({ className,
       
       russiaGeoJsonRef.current.eachLayer((layer: any) => {
         layer.setStyle({
-          color: "#3388ff",
-          weight: 2,
+          color: "#666666",
+          weight: 1,
           fill: false,
           fillOpacity: 0,
         });
@@ -354,33 +358,41 @@ const MapContainer = forwardRef<LeafletMapHandle, LeafletMapProps>(({ className,
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "&copy; OpenStreetMap contributors",
         }).addTo(map);
-
-fetch("/russia_regions.geojson")
-  .then((response) => response.json())
-  .then((data) => {
-    geoJsonDataRef.current = data;
-    
-    const geoJsonLayer = L.geoJSON(data, {
-      style: (feature) => {
-        return {
+        const russiaBorder = L.rectangle(russiaBounds, {
           color: "#3388ff",
-          weight: 2,
+          weight: 3,
           fill: false,
-          fillOpacity: 0,
-        };
-      },
-    }).addTo(map);
-    russiaGeoJsonRef.current = geoJsonLayer;
-    russiaBoundsRef.current = geoJsonLayer.getBounds();
+          opacity: 0.8
+        }).addTo(map);
 
-    if (russiaBoundsRef.current && typeof map.setMaxBoundsViscosity === 'function') {
-      map.setMaxBounds(russiaBoundsRef.current);
-      map.setMaxBoundsViscosity(1.0);
-    }
-  })
-  .catch((err) => {
-    console.error("[MapContainer] Error loading GeoJSON:", err);
-  });
+        fetch("/russia_regions.geojson")
+          .then((response) => response.json())
+          .then((data) => {
+            geoJsonDataRef.current = data;
+            
+            const geoJsonLayer = L.geoJSON(data, {
+              style: (feature) => {
+                return {
+                  color: "#666666",
+                  weight: 1,  
+                  fill: false,
+                  fillOpacity: 0,
+                  opacity: 0.6
+                };
+              },
+            }).addTo(map);
+            russiaGeoJsonRef.current = geoJsonLayer;
+            russiaBoundsRef.current = geoJsonLayer.getBounds();
+
+            if (russiaBoundsRef.current && typeof map.setMaxBoundsViscosity === 'function') {
+              map.setMaxBounds(russiaBoundsRef.current);
+              map.setMaxBoundsViscosity(1.0);
+            }
+          })
+          .catch((err) => {
+            console.error("[MapContainer] Error loading GeoJSON:", err);
+          });
+        
         mapRef.current = map;
         
         const enforceBounds = () => {

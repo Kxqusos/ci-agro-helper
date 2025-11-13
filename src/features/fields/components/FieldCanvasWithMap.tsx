@@ -5,7 +5,8 @@ import { useMap } from "@/features/map/context/MapContext";
 import type { FieldData, LLPoint } from "../types";
 import { 
   Pencil, 
-  Check 
+  Check,
+  Search
 } from "lucide-react";
 
 const getNextPointName = (index: number): string => {
@@ -37,6 +38,8 @@ export default function FieldCanvasWithMap({
   const [currentPoints, setCurrentPoints] = useState<LLPoint[]>([]);
   const [mouseCanvasPos, setMouseCanvasPos] = useState<{ x: number; y: number } | null>(null);
   const [currentZoom, setCurrentZoom] = useState(4);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     if (selectedField?.polygon) {
@@ -381,6 +384,38 @@ export default function FieldCanvasWithMap({
     console.log("[FieldCanvasWithMap] Drawing mode:", newDrawingMode);
   }, [drawingMode, currentPoints]);
 
+  // Функции для поиска
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+
+    if (!mapRef.current) {
+      alert("Карта еще загружается. Подождите немного и попробуйте снова.");
+      return;
+    }
+
+    setIsSearching(true);
+
+    try {
+      const result = await mapRef.current.searchCity(searchQuery.trim());
+      if (result) {
+        mapRef.current.flyToCity(result.lat, result.lng, 12);
+        setSearchQuery("");
+      } else {
+        alert("Город не найден. Попробуйте другой запрос.");
+      }
+    } catch (error) {
+      console.error("[FieldCanvasWithMap] Search error:", error);
+      alert("Ошибка при поиске города");
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") handleSearch(e);
+  };
+
   useEffect(() => {
     updateCanvasSize();
     window.addEventListener('resize', updateCanvasSize);
@@ -482,10 +517,44 @@ export default function FieldCanvasWithMap({
         />
       )}
 
-      <div className="absolute top-4 right-4 flex flex-col gap-2 z-10 pointer-events-auto">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto">
+        <div className="bg-white rounded-xl shadow-lg w-80 md:w-96 lg:w-[500px] xl:w-[600px]">
+          <form
+            onSubmit={handleSearch}
+            className="flex items-center"
+          >
+            <div className="relative flex items-center w-full">
+
+              <div className="flex items-center justify-center w-5 h-12 text-gray-600">
+              </div>
+
+              <input
+                type="text"
+                placeholder="Поиск города..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
+                disabled={isSearching}
+                className="w-full py-3 pr-4 border-0 outline-none bg-transparent text-gray-900 placeholder-gray-500 text-sm md:text-base disabled:opacity-50"
+              />
+
+              <button
+                type="submit"
+                disabled={isSearching || !searchQuery.trim()}
+                className="flex items-center justify-center w-10 h-10 mr-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors disabled:opacity-30 disabled:cursor-default flex-shrink-0"
+                title="Найти город"
+              >
+                <Search size={16} />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div className="absolute top-4 right-4 z-10 pointer-events-auto">
         <button
           onClick={handleToggleDrawing}
-          className={`w-12 h-12 rounded-lg shadow-lg transition-colors pointer-events-auto flex items-center justify-center ${
+          className={`w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl shadow-lg transition-colors flex items-center justify-center ${
             drawingMode 
               ? "bg-green-600 hover:bg-green-700 text-white" 
               : "bg-blue-600 hover:bg-blue-700 text-white"
@@ -493,13 +562,13 @@ export default function FieldCanvasWithMap({
           title={drawingMode ? "Завершить рисование" : "Начать рисование"}
         >
           {drawingMode ? (
-            <Check size={24} />
+            <Check size={24} className="md:w-6 md:h-6 lg:w-7 lg:h-7" />
           ) : (
-            <Pencil size={24} />
+            <Pencil size={24} className="md:w-6 md:h-6 lg:w-7 lg:h-7" />
           )}
         </button>
-        
       </div>
+
       {shapes.length > 0 && (
         <div className="absolute bottom-4 left-4 bg-green-600 text-white px-3 py-2 rounded-lg shadow-lg z-10 pointer-events-none">
           <div className="text-sm font-medium">Сохраненные поля: {shapes.length}</div>
@@ -510,11 +579,16 @@ export default function FieldCanvasWithMap({
       )}
 
       {drawingMode && (
-        <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg z-10 pointer-events-none">
+        <div className="absolute top-20 left-4 bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg z-10 pointer-events-none">
           <div className="text-sm font-medium">Режим рисования</div>
           <div className="text-xs opacity-80">
             Кликайте по карте для создания точек поля
           </div>
+        </div>
+      )}
+      {isSearching && (
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-10 pointer-events-none">
+          <div className="text-sm font-medium">Поиск...</div>
         </div>
       )}
     </div>

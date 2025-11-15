@@ -1,0 +1,646 @@
+{
+  "version": "1.0.0",
+  "updated": "2025-01-14",
+  "sources": [
+    {
+      "id": "asm_agro_2024",
+      "title": "Севооборот культур",
+      "authors": "ASM-AGRO",
+      "year": 2024,
+      "url": "https://asm-agro.ru/articles/sevooborot-kultur/"
+    },
+    {
+      "id": "botanichka_2024",
+      "title": "Пять способов севооборота для дачного участка",
+      "authors": "Ботаничка",
+      "year": 2024,
+      "url": "https://www.botanichka.ru/article/pyat-sposobov-sevooborota-dlya-dachnogo-uchastka/"
+    },
+    {
+      "id": "direct_farm_2024",
+      "title": "Принципы составления севооборотов",
+      "authors": "Direct.Farm",
+      "year": 2024,
+      "url": "https://direct.farm/post/printsipy-sostavleniya-sevooborotov-20990"
+    },
+    {
+      "id": "propozitsiya_2024",
+      "title": "Озимая пшеница в севообороте",
+      "authors": "Propozitsiya",
+      "year": 2024,
+      "url": "https://propozitsiya.com/ru/ozimaya-pshenica-v-sevooborote"
+    }
+  ],
+  "botanical_families": {
+    "poaceae": {
+      "name_ru": "Злаковые (Мятликовые)",
+      "name_latin": "Poaceae",
+      "common_pests": ["Злаковая тля", "Хлебная жужелица", "Злаковые мухи"],
+      "common_diseases": ["Корневая гниль", "Мучнистая роса", "Ржавчина"]
+    },
+    "fabaceae": {
+      "name_ru": "Бобовые",
+      "name_latin": "Fabaceae",
+      "common_pests": ["Гороховая тля", "Гороховая зерновка", "Клубеньковый долгоносик"],
+      "common_diseases": ["Аскохитоз", "Фузариоз", "Корневая гниль"]
+    },
+    "asteraceae": {
+      "name_ru": "Астровые (Сложноцветные)",
+      "name_latin": "Asteraceae",
+      "common_pests": ["Подсолнечниковая огневка", "Долгоносик", "Совки"],
+      "common_diseases": ["Белая гниль", "Серая гниль", "Ложная мучнистая роса"]
+    },
+    "solanaceae": {
+      "name_ru": "Пасленовые",
+      "name_latin": "Solanaceae",
+      "common_pests": ["Колорадский жук", "Проволочник", "Совки"],
+      "common_diseases": ["Фитофтороз", "Альтернариоз", "Черная ножка"]
+    },
+    "brassicaceae": {
+      "name_ru": "Крестоцветные (Капустные)",
+      "name_latin": "Brassicaceae",
+      "common_pests": ["Капустная муха", "Крестоцветная блошка", "Капустная белянка"],
+      "common_diseases": ["Кила", "Черная ножка", "Фузариоз"]
+    },
+    "apiaceae": {
+      "name_ru": "Зонтичные",
+      "name_latin": "Apiaceae",
+      "common_pests": ["Морковная муха", "Морковная листоблошка"],
+      "common_diseases": ["Альтернариоз", "Белая гниль"]
+    },
+    "cucurbitaceae": {
+      "name_ru": "Тыквенные",
+      "name_latin": "Cucurbitaceae",
+      "common_pests": ["Бахчевая тля", "Паутинный клещ"],
+      "common_diseases": ["Мучнистая роса", "Антракноз", "Бактериоз"]
+    },
+    "amaranthaceae": {
+      "name_ru": "Амарантовые",
+      "name_latin": "Amaranthaceae",
+      "common_pests": ["Свекловичная блошка", "Свекловичная муха"],
+      "common_diseases": ["Корнеед", "Церкоспороз"]
+    }
+  },
+  "crops": [
+    {
+      "crop_id": 1,
+      "crop_name": "Пшеница мягкая",
+      "crop_latin": "Triticum aestivum",
+      "botanical_family": "poaceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 2,
+          "recommended": 3
+        },
+        "good_predecessors": [
+          {
+            "crop_id": 19,
+            "rating": "excellent",
+            "reason": "Обогащение почвы азотом через клубеньковые бактерии",
+            "sources": ["direct_farm_2024", "propozitsiya_2024"]
+          },
+          {
+            "crop_id": 20,
+            "rating": "excellent",
+            "reason": "Обогащение почвы азотом, улучшение структуры",
+            "sources": ["direct_farm_2024", "propozitsiya_2024"]
+          },
+          {
+            "crop_id": 21,
+            "rating": "excellent",
+            "reason": "Обогащение почвы азотом",
+            "sources": ["propozitsiya_2024"]
+          },
+          {
+            "crop_id": 37,
+            "rating": "good",
+            "reason": "Глубокое рыхление почвы корневой системой",
+            "sources": ["propozitsiya_2024"]
+          },
+          {
+            "crop_id": 38,
+            "rating": "good",
+            "reason": "Разрыхление почвы, подавление сорняков",
+            "sources": ["propozitsiya_2024"]
+          },
+          {
+            "crop_id": 47,
+            "rating": "good",
+            "reason": "Рыхление почвы, разные вредители и болезни",
+            "sources": ["direct_farm_2024"]
+          },
+          {
+            "crop_id": "family:fabaceae",
+            "rating": "excellent",
+            "reason": "Все бобовые обогащают почву азотом",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 6,
+            "conditions": "При достаточном внесении удобрений",
+            "sources": ["propozitsiya_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 1,
+            "reason": "Общие вредители и болезни, истощение почвы по азоту",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 4,
+            "reason": "Общие вредители и болезни злаковых",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 5,
+            "reason": "Общие вредители и болезни злаковых",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": "family:poaceae",
+            "reason": "Общие вредители, болезни и истощение почвы",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "incompatible_families": ["poaceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.5,
+            "optimal": 6.5
+          },
+          "soil_type": ["суглинистая", "черноземная"],
+          "organic_matter": "средняя",
+          "drainage": "хороший"
+        },
+        "nutrient_impact": {
+          "nitrogen": "истощение",
+          "phosphorus": "истощение",
+          "potassium": "истощение",
+          "organic_matter": "нейтральное"
+        },
+        "data_confidence": "высокая"
+      }
+    },
+    {
+      "crop_id": 19,
+      "crop_name": "Горох посевной",
+      "crop_latin": "Pisum sativum",
+      "botanical_family": "fabaceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 2,
+          "recommended": 4
+        },
+        "good_predecessors": [
+          {
+            "crop_id": 1,
+            "rating": "good",
+            "reason": "Зерновые оставляют чистое поле, не имеют общих болезней",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 47,
+            "rating": "good",
+            "reason": "Разные типы питания и корневой системы",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 104,
+            "rating": "good",
+            "reason": "Капуста не имеет общих вредителей с горохом",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 108,
+            "rating": "good",
+            "reason": "Огурцы - хороший предшественник для бобовых",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 37,
+            "conditions": "При соблюдении интервала минимум 3 года",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 19,
+            "reason": "Накопление специфических болезней и вредителей",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 20,
+            "reason": "Общие болезни и вредители бобовых культур",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:fabaceae",
+            "reason": "Общие болезни (фузариоз, аскохитоз) и вредители",
+            "sources": ["direct_farm_2024"]
+          },
+          {
+            "crop_id": 6,
+            "reason": "Кукуруза не рекомендуется как предшественник",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "incompatible_families": ["fabaceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.0,
+            "optimal": 6.5
+          },
+          "soil_type": ["суглинистая", "средняя"],
+          "organic_matter": "средняя",
+          "drainage": "хороший"
+        },
+        "nutrient_impact": {
+          "nitrogen": "сильное_обогащение",
+          "phosphorus": "нейтральное",
+          "potassium": "истощение",
+          "organic_matter": "обогащение"
+        },
+        "notes": "Горох фиксирует атмосферный азот (60-100 кг/га), улучшая плодородие для последующих культур",
+        "data_confidence": "высокая"
+      }
+    },
+    {
+      "crop_id": 37,
+      "crop_name": "Подсолнечник",
+      "crop_latin": "Helianthus annuus",
+      "botanical_family": "asteraceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 4,
+          "recommended": 7
+        },
+        "good_predecessors": [
+          {
+            "crop_id": 1,
+            "rating": "good",
+            "reason": "Зерновые оставляют структурированную почву",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 4,
+            "rating": "good",
+            "reason": "Ячмень - хороший предшественник",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 5,
+            "rating": "good",
+            "reason": "Овес улучшает структуру почвы",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 6,
+            "rating": "good",
+            "reason": "Кукуруза обеспечивает хорошее рыхление",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": "family:fabaceae",
+            "rating": "excellent",
+            "reason": "Бобовые обогащают почву азотом",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 47,
+            "conditions": "При тщательной борьбе с проволочником",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 37,
+            "reason": "Накопление специфических болезней (белая гниль, ложная мучнистая роса), сильное истощение почвы",
+            "sources": ["asm_agro_2024"]
+          },
+          {
+            "crop_id": 49,
+            "reason": "Общие болезни (склеротиния)",
+            "sources": ["direct_farm_2024"]
+          },
+          {
+            "crop_id": 38,
+            "reason": "Общие болезни и вредители",
+            "sources": ["asm_agro_2024"]
+          }
+        ],
+        "incompatible_families": ["asteraceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.5,
+            "optimal": 6.8
+          },
+          "soil_type": ["черноземная", "суглинистая"],
+          "organic_matter": "высокая",
+          "drainage": "хороший"
+        },
+        "nutrient_impact": {
+          "nitrogen": "сильное_истощение",
+          "phosphorus": "сильное_истощение",
+          "potassium": "сильное_истощение",
+          "organic_matter": "истощение"
+        },
+        "notes": "Подсолнечник - очень истощающая культура. Глубокая корневая система (до 2-3 м) извлекает питательные вещества из глубоких слоев. Обязателен длительный интервал возврата.",
+        "data_confidence": "высокая"
+      }
+    },
+    {
+      "crop_id": 47,
+      "crop_name": "Картофель",
+      "crop_latin": "Solanum tuberosum",
+      "botanical_family": "solanaceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 2,
+          "recommended": 3
+        },
+        "good_predecessors": [
+          {
+            "crop_id": "family:fabaceae",
+            "rating": "excellent",
+            "reason": "Бобовые обогащают почву азотом, разная корневая система",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 104,
+            "rating": "good",
+            "reason": "Капуста рыхлит почву, не имеет общих болезней",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 108,
+            "rating": "good",
+            "reason": "Тыквенные улучшают структуру почвы",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:brassicaceae",
+            "rating": "good",
+            "reason": "Крестоцветные сидераты улучшают структуру почвы",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 48,
+            "conditions": "При отсутствии проволочника",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 106,
+            "conditions": "При хорошей обработке почвы",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 47,
+            "reason": "Накопление болезней (фитофтороз) и вредителей (проволочник, колорадский жук)",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 109,
+            "reason": "Общие болезни пасленовых (фитофтороз, альтернариоз)",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 110,
+            "reason": "Общие вредители и болезни пасленовых",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 111,
+            "reason": "Общие болезни пасленовых",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:solanaceae",
+            "reason": "Общие болезни и вредители семейства пасленовых",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "incompatible_families": ["solanaceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 5.0,
+            "max": 6.5,
+            "optimal": 5.8
+          },
+          "soil_type": ["легкая", "средняя", "суглинистая"],
+          "organic_matter": "высокая",
+          "drainage": "хороший"
+        },
+        "nutrient_impact": {
+          "nitrogen": "истощение",
+          "phosphorus": "истощение",
+          "potassium": "сильное_истощение",
+          "organic_matter": "истощение"
+        },
+        "notes": "Картофель требователен к калию. Предпочитает слабокислые почвы.",
+        "data_confidence": "высокая"
+      }
+    },
+    {
+      "crop_id": 104,
+      "crop_name": "Капуста белокочанная",
+      "crop_latin": "Brassica oleracea",
+      "botanical_family": "brassicaceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 3,
+          "recommended": 4
+        },
+        "good_predecessors": [
+          {
+            "crop_id": "family:fabaceae",
+            "rating": "excellent",
+            "reason": "Бобовые обогащают почву азотом, необходимым для капусты",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 47,
+            "rating": "good",
+            "reason": "Картофель рыхлит почву, нет общих болезней",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 48,
+            "rating": "good",
+            "reason": "Морковь улучшает структуру почвы",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 1,
+            "rating": "good",
+            "reason": "Зерновые оставляют чистое от сорняков поле",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 109,
+            "conditions": "При внесении органических удобрений",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 104,
+            "reason": "Накопление килы, черной ножки и специфических вредителей",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:brassicaceae",
+            "reason": "Общие болезни крестоцветных (кила, черная ножка)",
+            "sources": ["direct_farm_2024"]
+          },
+          {
+            "crop_id": 50,
+            "reason": "Общие вредители и болезни крестоцветных",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 49,
+            "reason": "Свекла не рекомендуется",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 96,
+            "reason": "Тыква не рекомендуется как предшественник",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "incompatible_families": ["brassicaceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.5,
+            "optimal": 7.0
+          },
+          "soil_type": ["суглинистая", "тяжелая"],
+          "organic_matter": "высокая",
+          "drainage": "средний"
+        },
+        "nutrient_impact": {
+          "nitrogen": "сильное_истощение",
+          "phosphorus": "истощение",
+          "potassium": "истощение",
+          "organic_matter": "истощение"
+        },
+        "notes": "Капуста очень требовательна к азоту и органике. Предпочитает нейтральные или слабощелочные почвы.",
+        "data_confidence": "высокая"
+      }
+    },
+    {
+      "crop_id": 109,
+      "crop_name": "Томат",
+      "crop_latin": "Solanum lycopersicum",
+      "botanical_family": "solanaceae",
+      "rotation_rules": {
+        "return_interval_years": {
+          "min": 2,
+          "recommended": 3
+        },
+        "good_predecessors": [
+          {
+            "crop_id": 19,
+            "rating": "excellent",
+            "reason": "Горох обогащает почву азотом",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 104,
+            "rating": "good",
+            "reason": "Капуста обеспечивает рыхлую почву",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 48,
+            "rating": "good",
+            "reason": "Морковь не имеет общих вредителей",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 108,
+            "rating": "good",
+            "reason": "Тыквенные улучшают структуру почвы",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:fabaceae",
+            "rating": "excellent",
+            "reason": "Все бобовые обогащают почву азотом",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "acceptable_predecessors": [
+          {
+            "crop_id": 106,
+            "conditions": "При внесении органики",
+            "sources": ["botanichka_2024"]
+          }
+        ],
+        "bad_predecessors": [
+          {
+            "crop_id": 109,
+            "reason": "Накопление фитофтороза и других болезней пасленовых",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 47,
+            "reason": "Общие болезни (фитофтороз, альтернариоз)",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 110,
+            "reason": "Общие болезни и вредители пасленовых",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": 111,
+            "reason": "Общие болезни пасленовых",
+            "sources": ["botanichka_2024"]
+          },
+          {
+            "crop_id": "family:solanaceae",
+            "reason": "Общие болезни и вредители",
+            "sources": ["direct_farm_2024"]
+          }
+        ],
+        "incompatible_families": ["solanaceae"],
+        "soil_requirements": {
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.0,
+            "optimal": 6.5
+          },
+          "soil_type": ["суглинистая", "легкая"],
+          "organic_matter": "высокая",
+          "drainage": "хороший"
+        },
+        "nutrient_impact": {
+          "nitrogen": "истощение",
+          "phosphorus": "истощение",
+          "potassium": "истощение",
+          "organic_matter": "истощение"
+        },
+        "notes": "Томаты требовательны к теплу и освещению. Не выносят кислых почв.",
+        "data_confidence": "высокая"
+      }
+    }
+  ]
+}

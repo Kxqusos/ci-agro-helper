@@ -1,0 +1,11 @@
+{
+  "rule_id": "sunflower_gap",
+  "target_crop_id": 37,
+  "weight": -0.2,
+  "description": "Подсолнечнику требуется минимум 4 года перерыва",
+  "dnf": [
+    [
+      {"kind": "gap", "subject": "crop:37", "min_gap_years": 4, "negated": true}
+    ]
+  ]
+}

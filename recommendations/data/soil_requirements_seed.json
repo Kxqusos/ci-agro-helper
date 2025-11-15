@@ -1,0 +1,75 @@
+[
+  {
+    "crop_id": 1,
+    "ph_min": 6.0,
+    "ph_max": 7.5,
+    "ph_optimal": 6.5,
+    "soil_types": [
+      "суглинистая",
+      "черноземная"
+    ],
+    "organic_matter": "средняя",
+    "drainage": "хороший"
+  },
+  {
+    "crop_id": 19,
+    "ph_min": 6.0,
+    "ph_max": 7.0,
+    "ph_optimal": 6.5,
+    "soil_types": [
+      "суглинистая",
+      "средняя"
+    ],
+    "organic_matter": "средняя",
+    "drainage": "хороший"
+  },
+  {
+    "crop_id": 37,
+    "ph_min": 6.0,
+    "ph_max": 7.5,
+    "ph_optimal": 6.8,
+    "soil_types": [
+      "черноземная",
+      "суглинистая"
+    ],
+    "organic_matter": "высокая",
+    "drainage": "хороший"
+  },
+  {
+    "crop_id": 47,
+    "ph_min": 5.0,
+    "ph_max": 6.5,
+    "ph_optimal": 5.8,
+    "soil_types": [
+      "легкая",
+      "средняя",
+      "суглинистая"
+    ],
+    "organic_matter": "высокая",
+    "drainage": "хороший"
+  },
+  {
+    "crop_id": 104,
+    "ph_min": 6.0,
+    "ph_max": 7.5,
+    "ph_optimal": 7.0,
+    "soil_types": [
+      "суглинистая",
+      "тяжелая"
+    ],
+    "organic_matter": "высокая",
+    "drainage": "средний"
+  },
+  {
+    "crop_id": 109,
+    "ph_min": 6.0,
+    "ph_max": 7.0,
+    "ph_optimal": 6.5,
+    "soil_types": [
+      "суглинистая",
+      "легкая"
+    ],
+    "organic_matter": "высокая",
+    "drainage": "хороший"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "rule_id": "wheat_after_legumes",
+  "target_crop_id": 1,
+  "weight": 0.15,
+  "description": "Злаковые получают бонус, если на предшествующем цикле были бобовые",
+  "dnf": [
+    [
+      {"kind": "match", "subject": "family:fabaceae", "window": 2}
+    ]
+  ]
+}

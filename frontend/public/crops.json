@@ -1,0 +1,1502 @@
+{
+  "searchIndex": [
+    {
+      "id": 1,
+      "name": "Пшеница мягкая",
+      "latin": "Triticum aestivum",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 2,
+      "name": "Пшеница твёрдая",
+      "latin": "Triticum durum",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 3,
+      "name": "Рожь",
+      "latin": "Secale cereale",
+      "categories": ["Зерновые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 4,
+      "name": "Ячмень",
+      "latin": "Hordeum vulgare",
+      "categories": ["Зерновые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 5,
+      "name": "Овёс",
+      "latin": "Avena sativa",
+      "categories": ["Зерновые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 6,
+      "name": "Кукуруза",
+      "latin": "Zea mays",
+      "categories": ["Зерновые культуры", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 7,
+      "name": "Тритикале",
+      "latin": "×Triticosecale",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 8,
+      "name": "Просо",
+      "latin": "Panicum miliaceum",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 9,
+      "name": "Гречиха",
+      "latin": "Fagopyrum esculentum",
+      "categories": ["Зерновые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 10,
+      "name": "Рис",
+      "latin": "Oryza sativa",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 11,
+      "name": "Сорго",
+      "latin": "Sorghum bicolor",
+      "categories": ["Зерновые культуры", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 12,
+      "name": "Полба",
+      "latin": "Triticum spelta",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 13,
+      "name": "Чумиза",
+      "latin": "Setaria italica",
+      "categories": ["Зерновые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 14,
+      "name": "Амарант",
+      "latin": "Amaranthus",
+      "categories": ["Зерновые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 15,
+      "name": "Киноа",
+      "latin": "Chenopodium quinoa",
+      "categories": ["Зерновые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 16,
+      "name": "Тефф",
+      "latin": "Eragrostis tef",
+      "categories": ["Зерновые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 17,
+      "name": "Дагусса",
+      "latin": "Eleusine coracana",
+      "categories": ["Зерновые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 18,
+      "name": "Паиза",
+      "latin": "Echinochloa frumentacea",
+      "categories": ["Зерновые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 19,
+      "name": "Горох посевной",
+      "latin": "Pisum sativum",
+      "categories": ["Зернобобовые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 20,
+      "name": "Соя",
+      "latin": "Glycine max",
+      "categories": ["Зернобобовые культуры", "Масличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 21,
+      "name": "Нут",
+      "latin": "Cicer arietinum",
+      "categories": ["Зернобобовые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 22,
+      "name": "Чечевица",
+      "latin": "Lens culinaris",
+      "categories": ["Зернобобовые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 23,
+      "name": "Люпин белый",
+      "latin": "Lupinus albus",
+      "categories": ["Зернобобовые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 24,
+      "name": "Люпин жёлтый",
+      "latin": "Lupinus luteus",
+      "categories": ["Зернобобовые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 25,
+      "name": "Люпин узколистный",
+      "latin": "Lupinus angustifolius",
+      "categories": ["Зернобобовые культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 26,
+      "name": "Бобы кормовые",
+      "latin": "Vicia faba",
+      "categories": ["Зернобобовые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 27,
+      "name": "Вика яровая",
+      "latin": "Vicia sativa",
+      "categories": ["Зернобобовые культуры", "Сидеральные культуры", "Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 28,
+      "name": "Вика озимая",
+      "latin": "Vicia villosa",
+      "categories": ["Зернобобовые культуры", "Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 29,
+      "name": "Чина посевная",
+      "latin": "Lathyrus sativus",
+      "categories": ["Зернобобовые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 30,
+      "name": "Арахис",
+      "latin": "Arachis hypogaea",
+      "categories": ["Зернобобовые культуры", "Масличные культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 31,
+      "name": "Коровий горох",
+      "latin": "Vigna unguiculata",
+      "categories": ["Зернобобовые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 32,
+      "name": "Голубиный горох",
+      "latin": "Cajanus cajan",
+      "categories": ["Зернобобовые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 33,
+      "name": "Маш",
+      "latin": "Vigna radiata",
+      "categories": ["Зернобобовые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 34,
+      "name": "Фасоль обыкновенная",
+      "latin": "Phaseolus vulgaris",
+      "categories": ["Зернобобовые культуры", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 35,
+      "name": "Фасоль адзуки",
+      "latin": "Vigna angularis",
+      "categories": ["Зернобобовые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 36,
+      "name": "Фасоль лимская",
+      "latin": "Phaseolus lunatus",
+      "categories": ["Зернобобовые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 37,
+      "name": "Подсолнечник",
+      "latin": "Helianthus annuus",
+      "categories": ["Масличные культуры", "Технические культуры", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 38,
+      "name": "Рапс",
+      "latin": "Brassica napus",
+      "categories": ["Масличные культуры", "Технические культуры", "Сидеральные культуры", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 39,
+      "name": "Лён масличный",
+      "latin": "Linum usitatissimum",
+      "categories": ["Масличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 40,
+      "name": "Горчица",
+      "latin": "Sinapis",
+      "categories": ["Масличные культуры", "Технические культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 41,
+      "name": "Рыжик",
+      "latin": "Camelina sativa",
+      "categories": ["Масличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 42,
+      "name": "Сафлор",
+      "latin": "Carthamus tinctorius",
+      "categories": ["Масличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 43,
+      "name": "Сурепица",
+      "latin": "Brassica rapa",
+      "categories": ["Масличные культуры", "Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 44,
+      "name": "Кунжут",
+      "latin": "Sesamum indicum",
+      "categories": ["Масличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 45,
+      "name": "Перилла",
+      "latin": "Perilla frutescens",
+      "categories": ["Масличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 46,
+      "name": "Клещевина",
+      "latin": "Ricinus communis",
+      "categories": ["Масличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 47,
+      "name": "Картофель",
+      "latin": "Solanum tuberosum",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 48,
+      "name": "Морковь",
+      "latin": "Daucus carota",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 49,
+      "name": "Свёкла",
+      "latin": "Beta vulgaris",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 50,
+      "name": "Редис",
+      "latin": "Raphanus sativus",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 51,
+      "name": "Редька",
+      "latin": "Raphanus",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 52,
+      "name": "Репа",
+      "latin": "Brassica rapa",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 53,
+      "name": "Брюква",
+      "latin": "Brassica napus",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 54,
+      "name": "Турнепс",
+      "latin": "Brassica rapa",
+      "categories": ["Корнеклубнеплоды", "Кормовые корнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 55,
+      "name": "Топинамбур",
+      "latin": "Helianthus tuberosus",
+      "categories": ["Корнеклубнеплоды", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 56,
+      "name": "Хрен",
+      "latin": "Armoracia rusticana",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 57,
+      "name": "Пастернак",
+      "latin": "Pastinaca sativa",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 58,
+      "name": "Сельдерей корневой",
+      "latin": "Apium graveolens",
+      "categories": ["Корнеклубнеплоды", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 59,
+      "name": "Цикорий корневой",
+      "latin": "Cichorium intybus",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 60,
+      "name": "Скорцонера",
+      "latin": "Scorzonera hispanica",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 61,
+      "name": "Батат",
+      "latin": "Ipomoea batatas",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "редкая"
+    },
+    {
+      "id": 62,
+      "name": "Ямс",
+      "latin": "Dioscorea",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "редкая"
+    },
+    {
+      "id": 63,
+      "name": "Маниок",
+      "latin": "Manihot esculenta",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "редкая"
+    },
+    {
+      "id": 64,
+      "name": "Таро",
+      "latin": "Colocasia esculenta",
+      "categories": ["Корнеклубнеплоды"],
+      "type": "редкая"
+    },
+    {
+      "id": 65,
+      "name": "Свёкла кормовая",
+      "latin": "Beta vulgaris",
+      "categories": ["Кормовые корнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 66,
+      "name": "Брюква кормовая",
+      "latin": "Brassica napus",
+      "categories": ["Кормовые корнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 67,
+      "name": "Морковь кормовая",
+      "latin": "Daucus carota",
+      "categories": ["Кормовые корнеплоды"],
+      "type": "основная"
+    },
+    {
+      "id": 68,
+      "name": "Люцерна",
+      "latin": "Medicago sativa",
+      "categories": ["Кормовые травы", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 69,
+      "name": "Клевер луговой",
+      "latin": "Trifolium pratense",
+      "categories": ["Кормовые травы", "Сидеральные культуры", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 70,
+      "name": "Клевер гибридный",
+      "latin": "Trifolium hybridum",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 71,
+      "name": "Клевер ползучий",
+      "latin": "Trifolium repens",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 72,
+      "name": "Тимофеевка луговая",
+      "latin": "Phleum pratense",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 73,
+      "name": "Овсяница луговая",
+      "latin": "Festuca pratensis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 74,
+      "name": "Ежа сборная",
+      "latin": "Dactylis glomerata",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 75,
+      "name": "Кострец безостый",
+      "latin": "Bromus inermis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 76,
+      "name": "Райграс многолетний",
+      "latin": "Lolium perenne",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 77,
+      "name": "Донник",
+      "latin": "Melilotus",
+      "categories": ["Кормовые травы", "Сидеральные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 78,
+      "name": "Суданская трава",
+      "latin": "Sorghum × drummondii",
+      "categories": ["Кормовые травы", "Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 79,
+      "name": "Вика мохнатая",
+      "latin": "Vicia villosa",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 80,
+      "name": "Житняк",
+      "latin": "Agropyron",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 81,
+      "name": "Козлятник восточный",
+      "latin": "Galega orientalis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 82,
+      "name": "Овсяница тростниковая",
+      "latin": "Festuca arundinacea",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 83,
+      "name": "Могар",
+      "latin": "Setaria italica",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 84,
+      "name": "Мятлик луговой",
+      "latin": "Poa pratensis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 85,
+      "name": "Пажитник",
+      "latin": "Trigonella",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 86,
+      "name": "Полевица белая",
+      "latin": "Agrostis stolonifera",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 87,
+      "name": "Пырей бескорневищный",
+      "latin": "Elymus trachycaulus",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 88,
+      "name": "Райграс однолетний",
+      "latin": "Lolium multiflorum",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 89,
+      "name": "Сераделла",
+      "latin": "Ornithopus sativus",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 90,
+      "name": "Чина луговая",
+      "latin": "Lathyrus pratensis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 91,
+      "name": "Эспарцет",
+      "latin": "Onobrychis",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 92,
+      "name": "Лядвенец рогатый",
+      "latin": "Lotus corniculatus",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 93,
+      "name": "Кровохлёбка",
+      "latin": "Sanguisorba",
+      "categories": ["Кормовые травы"],
+      "type": "основная"
+    },
+    {
+      "id": 94,
+      "name": "Арбуз",
+      "latin": "Citrullus lanatus",
+      "categories": ["Бахчевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 95,
+      "name": "Дыня",
+      "latin": "Cucumis melo",
+      "categories": ["Бахчевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 96,
+      "name": "Тыква",
+      "latin": "Cucurbita",
+      "categories": ["Бахчевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 97,
+      "name": "Кабачок",
+      "latin": "Cucurbita pepo",
+      "categories": ["Бахчевые культуры", "Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 98,
+      "name": "Патиссон",
+      "latin": "Cucurbita pepo",
+      "categories": ["Бахчевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 99,
+      "name": "Лагенария",
+      "latin": "Lagenaria siceraria",
+      "categories": ["Бахчевые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 100,
+      "name": "Люффа",
+      "latin": "Luffa",
+      "categories": ["Бахчевые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 101,
+      "name": "Кивано",
+      "latin": "Cucumis metuliferus",
+      "categories": ["Бахчевые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 102,
+      "name": "Крукнек",
+      "latin": "Cucurbita moschata",
+      "categories": ["Бахчевые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 103,
+      "name": "Момордика",
+      "latin": "Momordica",
+      "categories": ["Бахчевые культуры"],
+      "type": "редкая"
+    },
+    {
+      "id": 104,
+      "name": "Капуста белокочанная",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 105,
+      "name": "Капуста цветная",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 106,
+      "name": "Лук репчатый",
+      "latin": "Allium cepa",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 107,
+      "name": "Чеснок",
+      "latin": "Allium sativum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 108,
+      "name": "Огурец",
+      "latin": "Cucumis sativus",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 109,
+      "name": "Томат",
+      "latin": "Solanum lycopersicum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 110,
+      "name": "Перец овощной",
+      "latin": "Capsicum annuum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 111,
+      "name": "Баклажан",
+      "latin": "Solanum melongena",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 112,
+      "name": "Горох овощной",
+      "latin": "Pisum sativum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 113,
+      "name": "Фасоль овощная",
+      "latin": "Phaseolus vulgaris",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 114,
+      "name": "Укроп",
+      "latin": "Anethum graveolens",
+      "categories": ["Овощные полевые культуры", "Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 115,
+      "name": "Петрушка корневая",
+      "latin": "Petroselinum crispum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 116,
+      "name": "Салат",
+      "latin": "Lactuca sativa",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 117,
+      "name": "Шпинат",
+      "latin": "Spinacia oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 118,
+      "name": "Щавель",
+      "latin": "Rumex acetosa",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 119,
+      "name": "Ревень",
+      "latin": "Rheum rhabarbarum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 120,
+      "name": "Лук порей",
+      "latin": "Allium porrum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 121,
+      "name": "Лук шалот",
+      "latin": "Allium ascalonicum",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 122,
+      "name": "Капуста брокколи",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 123,
+      "name": "Капуста брюссельская",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 124,
+      "name": "Капуста кольраби",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 125,
+      "name": "Капуста пекинская",
+      "latin": "Brassica rapa",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 126,
+      "name": "Капуста савойская",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 127,
+      "name": "Капуста краснокочанная",
+      "latin": "Brassica oleracea",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 128,
+      "name": "Капуста китайская",
+      "latin": "Brassica rapa",
+      "categories": ["Овощные полевые культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 129,
+      "name": "Кориандр",
+      "latin": "Coriandrum sativum",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 130,
+      "name": "Анис",
+      "latin": "Pimpinella anisum",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 131,
+      "name": "Тмин",
+      "latin": "Carum carvi",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 132,
+      "name": "Фенхель",
+      "latin": "Foeniculum vulgare",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 133,
+      "name": "Мята перечная",
+      "latin": "Mentha × piperita",
+      "categories": ["Эфирномасличные культуры", "Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 134,
+      "name": "Лаванда",
+      "latin": "Lavandula",
+      "categories": ["Эфирномасличные культуры", "Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 135,
+      "name": "Шалфей мускатный",
+      "latin": "Salvia sclarea",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 136,
+      "name": "Базилик",
+      "latin": "Ocimum basilicum",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 137,
+      "name": "Душица",
+      "latin": "Origanum vulgare",
+      "categories": ["Эфирномасличные культуры", "Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 138,
+      "name": "Иссоп",
+      "latin": "Hyssopus officinalis",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 139,
+      "name": "Тимьян",
+      "latin": "Thymus vulgaris",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 140,
+      "name": "Розмарин",
+      "latin": "Rosmarinus officinalis",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 141,
+      "name": "Мелисса",
+      "latin": "Melissa officinalis",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 142,
+      "name": "Лимонник",
+      "latin": "Schisandra chinensis",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 143,
+      "name": "Герань розовая",
+      "latin": "Pelargonium graveolens",
+      "categories": ["Эфирномасличные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 144,
+      "name": "Роза эфирномасличная",
+      "latin": "Rosa × damascena",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 145,
+      "name": "Ажгон",
+      "latin": "Trachyspermum ammi",
+      "categories": ["Эфирномасличные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 146,
+      "name": "Ромашка аптечная",
+      "latin": "Matricaria chamomilla",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 147,
+      "name": "Зверобой продырявленный",
+      "latin": "Hypericum perforatum",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 148,
+      "name": "Валериана лекарственная",
+      "latin": "Valeriana officinalis",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 149,
+      "name": "Пустырник сердечный",
+      "latin": "Leonurus cardiaca",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 150,
+      "name": "Календула лекарственная",
+      "latin": "Calendula officinalis",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 151,
+      "name": "Эхинацея пурпурная",
+      "latin": "Echinacea purpurea",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 152,
+      "name": "Алтей лекарственный",
+      "latin": "Althaea officinalis",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 153,
+      "name": "Девясил высокий",
+      "latin": "Inula helenium",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 154,
+      "name": "Подорожник большой",
+      "latin": "Plantago major",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 155,
+      "name": "Тысячелистник обыкновенный",
+      "latin": "Achillea millefolium",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 156,
+      "name": "Чабрец ползучий",
+      "latin": "Thymus serpyllum",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 157,
+      "name": "Шалфей лекарственный",
+      "latin": "Salvia officinalis",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 158,
+      "name": "Облепиха крушиновидная",
+      "latin": "Hippophae rhamnoides",
+      "categories": ["Лекарственные культуры", "Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 159,
+      "name": "Родиола розовая",
+      "latin": "Rhodiola rosea",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 160,
+      "name": "Левзея сафлоровидная",
+      "latin": "Rhaponticum carthamoides",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 161,
+      "name": "Элеутерококк колючий",
+      "latin": "Eleutherococcus senticosus",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 162,
+      "name": "Женьшень",
+      "latin": "Panax ginseng",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 163,
+      "name": "Солодка голая",
+      "latin": "Glycyrrhiza glabra",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 164,
+      "name": "Аир болотный",
+      "latin": "Acorus calamus",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 165,
+      "name": "Горец змеиный",
+      "latin": "Persicaria bistorta",
+      "categories": ["Лекарственные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 166,
+      "name": "Кровохлёбка лекарственная",
+      "latin": "Sanguisorba officinalis",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 167,
+      "name": "Липа сердцевидная",
+      "latin": "Tilia cordata",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 168,
+      "name": "Хвощ полевой",
+      "latin": "Equisetum arvense",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 169,
+      "name": "Череда трёхраздельная",
+      "latin": "Bidens tripartita",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 170,
+      "name": "Багульник болотный",
+      "latin": "Ledum palustre",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 171,
+      "name": "Аралия маньчжурская",
+      "latin": "Aralia elata",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 172,
+      "name": "Арника горная",
+      "latin": "Arnica montana",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 173,
+      "name": "Эвкалипт",
+      "latin": "Eucalyptus",
+      "categories": ["Лекарственные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 174,
+      "name": "Горчица белая",
+      "latin": "Sinapis alba",
+      "categories": ["Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 175,
+      "name": "Редька масличная",
+      "latin": "Raphanus sativus",
+      "categories": ["Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 176,
+      "name": "Фацелия",
+      "latin": "Phacelia tanacetifolia",
+      "categories": ["Сидеральные культуры", "Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 177,
+      "name": "Клевер",
+      "latin": "Trifolium",
+      "categories": ["Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 178,
+      "name": "Люпин",
+      "latin": "Lupinus",
+      "categories": ["Сидеральные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 179,
+      "name": "Кукуруза на силос",
+      "latin": "Zea mays",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 180,
+      "name": "Подсолнечник на силос",
+      "latin": "Helianthus annuus",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 181,
+      "name": "Сорго на силос",
+      "latin": "Sorghum bicolor",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 182,
+      "name": "Рапс на силос",
+      "latin": "Brassica napus",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 183,
+      "name": "Люцерна на силос",
+      "latin": "Medicago sativa",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 184,
+      "name": "Клевер на силос",
+      "latin": "Trifolium",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 185,
+      "name": "Вико-овсяная смесь на силос",
+      "latin": "Vicia sativa + Avena sativa",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 186,
+      "name": "Горохо-овсяная смесь на силос",
+      "latin": "Pisum sativum + Avena sativa",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 187,
+      "name": "Рожь на силос",
+      "latin": "Secale cereale",
+      "categories": ["Силосные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 188,
+      "name": "Земляника садовая",
+      "latin": "Fragaria × ananassa",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 189,
+      "name": "Клубника",
+      "latin": "Fragaria vesca",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 190,
+      "name": "Малина",
+      "latin": "Rubus idaeus",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 191,
+      "name": "Смородина чёрная",
+      "latin": "Ribes nigrum",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 192,
+      "name": "Смородина красная",
+      "latin": "Ribes rubrum",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 193,
+      "name": "Смородина белая",
+      "latin": "Ribes rubrum",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 194,
+      "name": "Крыжовник",
+      "latin": "Ribes uva-crispa",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 195,
+      "name": "Ежевика",
+      "latin": "Rubus fruticosus",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 196,
+      "name": "Жимолость съедобная",
+      "latin": "Lonicera caerulea",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 197,
+      "name": "Ирга",
+      "latin": "Amelanchier",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 198,
+      "name": "Арония",
+      "latin": "Aronia melanocarpa",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 199,
+      "name": "Калина",
+      "latin": "Viburnum opulus",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 200,
+      "name": "Бузина чёрная",
+      "latin": "Sambucus nigra",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 201,
+      "name": "Шиповник",
+      "latin": "Rosa",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 202,
+      "name": "Брусника",
+      "latin": "Vaccinium vitis-idaea",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 203,
+      "name": "Клюква",
+      "latin": "Vaccinium oxycoccos",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 204,
+      "name": "Голубика",
+      "latin": "Vaccinium uliginosum",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 205,
+      "name": "Черника",
+      "latin": "Vaccinium myrtillus",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 206,
+      "name": "Виноград",
+      "latin": "Vitis vinifera",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 207,
+      "name": "Актинидия",
+      "latin": "Actinidia",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 208,
+      "name": "Лимонник",
+      "latin": "Schisandra chinensis",
+      "categories": ["Ягодные культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 209,
+      "name": "Сахарная свёкла",
+      "latin": "Beta vulgaris",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 210,
+      "name": "Лён-долгунец",
+      "latin": "Linum usitatissimum",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 211,
+      "name": "Конопля техническая",
+      "latin": "Cannabis sativa",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 212,
+      "name": "Хлопчатник",
+      "latin": "Gossypium",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 213,
+      "name": "Хмель",
+      "latin": "Humulus lupulus",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    },
+    {
+      "id": 214,
+      "name": "Табак",
+      "latin": "Nicotiana tabacum",
+      "categories": ["Технические культуры"],
+      "type": "основная"
+    }
+  ]
+}

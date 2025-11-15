@@ -1,0 +1,13 @@
+bcrypt>=3.2,<4.1
+fastapi>=0.120.0
+greenlet>=3.2.4
+passlib[bcrypt]>=1.7.4
+pwdlib[argon2]>=0.3.0
+pydantic-extra-types>=2.10.6
+pyjwt>=2.10.1
+sqlalchemy>=2.0.44
+uv>=0.9.8
+uvicorn>=0.38.0
+asyncpg
+phonenumbers
+pydantic[email]

@@ -1,0 +1,17 @@
+{
+  "rule_id": "potato_legume_brassica_sequence",
+  "target_crop_id": 47,
+  "weight": 0.12,
+  "description": "Комбинация бобовые -> капустные улучшает питание почвы перед картофелем",
+  "dnf": [
+    [
+      {
+        "kind": "sequence",
+        "tokens": [
+          "family:brassicaceae",
+          "family:fabaceae"
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,154 @@
+services:
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    container_name: auth
+    env_file: .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-app}@postgres:5432/${POSTGRES_DB:-app}}
+    # NOTE: Port 8001 is only for local development
+    # In production with NPM, comment out or remove the ports section to prevent external access
+    ports:
+      - "8001:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - app-network
+    restart: unless-stopped
+  
+  recommendations:
+    build:
+      context: ./recommendations
+      dockerfile: Dockerfile
+    container_name: recommendations
+    env_file: .env
+    environment:
+      DATABASE_URL: ${RECOMMENDATIONS_DATABASE_URL:-postgresql+asyncpg://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-app}@postgres:5432/${POSTGRES_DB:-app}}
+      KAFKA_ENABLED: ${KAFKA_ENABLED:-false}
+      KAFKA_BOOTSTRAP_SERVERS: ${KAFKA_BOOTSTRAP_SERVERS:-kafka:9092}
+      KAFKA_REQUEST_TOPIC: ${KAFKA_REQUEST_TOPIC:-recommendations.request}
+      KAFKA_RESULT_TOPIC: ${KAFKA_RESULT_TOPIC:-recommendations.result}
+      KAFKA_CLIENT_ID: ${KAFKA_CLIENT_ID:-recommendations-service}
+      KAFKA_GROUP_ID: ${KAFKA_GROUP_ID:-recommendations-worker}
+      KAFKA_POLL_TIMEOUT_MS: ${KAFKA_POLL_TIMEOUT_MS:-1000}
+      KAFKA_RETRY_BACKOFF_SECONDS: ${KAFKA_RETRY_BACKOFF_SECONDS:-1.0}
+      KAFKA_MAX_RETRY_ATTEMPTS: ${KAFKA_MAX_RETRY_ATTEMPTS:-5}
+    # NOTE: Port 8002 is only for local development
+    # In production with NPM, comment out or remove the ports section to prevent external access
+    ports:
+      - "8002:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      # kafka:
+      #   condition: service_healthy  # Commented out - Kafka not required for MVP (KAFKA_ENABLED=false)
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    env_file: .env
+    environment:
+      # BFF layer configuration - internal Docker network URLs
+      AUTH_SERVICE_URL: http://auth:8000
+      RECOMMENDATIONS_SERVICE_URL: http://recommendations:8000
+      # Next.js runtime configuration
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+    ports:
+      # Only frontend is exposed externally for NPM proxy
+      - "3000:3000"
+    depends_on:
+      auth:
+        condition: service_healthy
+      recommendations:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  kafka:
+    image: bitnami/kafka:latest
+    container_name: kafka
+    environment:
+      KAFKA_CFG_NODE_ID: 1
+      KAFKA_CFG_PROCESS_ROLES: controller,broker
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_ENABLE_KRAFT: "yes"
+    ports:
+      - "9092:9092"
+    volumes:
+      - kafka-data:/bitnami/kafka
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/bitnami/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null 2>&1",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-app}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-app} -d ${POSTGRES_DB:-app}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  kafka-data:
+
+networks:
+  app-network:
+    driver: bridge

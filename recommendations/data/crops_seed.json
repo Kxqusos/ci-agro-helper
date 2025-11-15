@@ -1,0 +1,38 @@
+[
+  {
+    "crop_id": 1,
+    "crop_name": "Пшеница мягкая",
+    "crop_latin": "Triticum aestivum",
+    "botanical_family_key": "poaceae"
+  },
+  {
+    "crop_id": 19,
+    "crop_name": "Горох посевной",
+    "crop_latin": "Pisum sativum",
+    "botanical_family_key": "fabaceae"
+  },
+  {
+    "crop_id": 37,
+    "crop_name": "Подсолнечник",
+    "crop_latin": "Helianthus annuus",
+    "botanical_family_key": "asteraceae"
+  },
+  {
+    "crop_id": 47,
+    "crop_name": "Картофель",
+    "crop_latin": "Solanum tuberosum",
+    "botanical_family_key": "solanaceae"
+  },
+  {
+    "crop_id": 104,
+    "crop_name": "Капуста белокочанная",
+    "crop_latin": "Brassica oleracea",
+    "botanical_family_key": "brassicaceae"
+  },
+  {
+    "crop_id": 109,
+    "crop_name": "Томат",
+    "crop_latin": "Solanum lycopersicum",
+    "botanical_family_key": "solanaceae"
+  }
+]

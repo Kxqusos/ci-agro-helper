@@ -1,0 +1,11 @@
+{
+  "rule_id": "fixture_pea_not_after_poaceae",
+  "target_crop_id": 19,
+  "weight": 0.1,
+  "description": "Бонус, если горох не следует сразу после злаков",
+  "dnf": [
+    [
+      {"kind": "sequence", "tokens": ["!family:poaceae"]}
+    ]
+  ]
+}

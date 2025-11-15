@@ -1,0 +1,11 @@
+{
+  "rule_id": "fixture_wheat_after_pea",
+  "target_crop_id": 1,
+  "weight": 0.25,
+  "description": "Пшеница получает бонус после гороха",
+  "dnf": [
+    [
+      {"kind": "sequence", "tokens": ["crop:19"]}
+    ]
+  ]
+}

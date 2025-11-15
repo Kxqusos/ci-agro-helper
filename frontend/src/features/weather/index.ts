@@ -1,0 +1,1 @@
+export { default as WeatherTab } from './components/WeatherTab';

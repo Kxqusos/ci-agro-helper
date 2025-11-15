@@ -1,0 +1,1 @@
+export { default as SatelliteTab } from './components/SatelliteTab';

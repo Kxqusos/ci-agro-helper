@@ -1,0 +1,301 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Crop Rotation Rules Schema",
+  "description": "Схема для формализации агрономических правил севооборота",
+  "type": "object",
+  "required": ["version", "updated", "crops"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Версия схемы данных (формат: YYYY-MM-DD или semver)"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Дата последнего обновления данных"
+    },
+    "sources": {
+      "type": "array",
+      "description": "Список первоисточников",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "year"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Уникальный идентификатор источника"
+          },
+          "title": {
+            "type": "string",
+            "description": "Название источника"
+          },
+          "authors": {
+            "type": "string",
+            "description": "Авторы"
+          },
+          "year": {
+            "type": "integer",
+            "description": "Год публикации"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Ссылка на источник"
+          },
+          "isbn": {
+            "type": "string",
+            "description": "ISBN (для книг)"
+          },
+          "doi": {
+            "type": "string",
+            "description": "DOI (для научных публикаций)"
+          }
+        }
+      }
+    },
+    "botanical_families": {
+      "type": "object",
+      "description": "Справочник ботанических семейств",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name_ru": {
+            "type": "string",
+            "description": "Русское название семейства"
+          },
+          "name_latin": {
+            "type": "string",
+            "description": "Латинское название семейства"
+          },
+          "common_pests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Общие вредители для семейства"
+          },
+          "common_diseases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Общие болезни для семейства"
+          }
+        }
+      }
+    },
+    "crops": {
+      "type": "array",
+      "description": "Массив правил для культур",
+      "items": {
+        "type": "object",
+        "required": ["crop_id", "crop_name", "botanical_family", "rotation_rules"],
+        "properties": {
+          "crop_id": {
+            "type": "integer",
+            "description": "ID культуры (соответствует frontend/src/data/crops.json)"
+          },
+          "crop_name": {
+            "type": "string",
+            "description": "Название культуры"
+          },
+          "crop_latin": {
+            "type": "string",
+            "description": "Латинское название"
+          },
+          "botanical_family": {
+            "type": "string",
+            "description": "Ботаническое семейство (ключ из botanical_families)"
+          },
+          "rotation_rules": {
+            "type": "object",
+            "required": ["return_interval_years"],
+            "properties": {
+              "return_interval_years": {
+                "type": "object",
+                "required": ["min", "recommended"],
+                "properties": {
+                  "min": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Минимальный срок возврата культуры на поле (лет)"
+                  },
+                  "recommended": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Рекомендуемый срок возврата (лет)"
+                  }
+                },
+                "description": "Интервал возврата культуры на то же поле"
+              },
+              "good_predecessors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["crop_id", "rating"],
+                  "properties": {
+                    "crop_id": {
+                      "oneOf": [
+                        {"type": "integer"},
+                        {"type": "string", "pattern": "^family:"}
+                      ],
+                      "description": "ID культуры или 'family:название_семейства'"
+                    },
+                    "rating": {
+                      "type": "string",
+                      "enum": ["excellent", "good"],
+                      "description": "Оценка качества предшественника"
+                    },
+                    "reason": {
+                      "type": "string",
+                      "description": "Причина (обогащение азотом, рыхление почвы и т.д.)"
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Ссылки на ID источников"
+                    }
+                  }
+                },
+                "description": "Хорошие предшественники"
+              },
+              "acceptable_predecessors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["crop_id"],
+                  "properties": {
+                    "crop_id": {
+                      "oneOf": [
+                        {"type": "integer"},
+                        {"type": "string", "pattern": "^family:"}
+                      ]
+                    },
+                    "conditions": {
+                      "type": "string",
+                      "description": "Условия допустимости"
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "description": "Допустимые предшественники (при соблюдении условий)"
+              },
+              "bad_predecessors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["crop_id", "reason"],
+                  "properties": {
+                    "crop_id": {
+                      "oneOf": [
+                        {"type": "integer"},
+                        {"type": "string", "pattern": "^family:"}
+                      ]
+                    },
+                    "reason": {
+                      "type": "string",
+                      "description": "Причина несовместимости (общие болезни, истощение почвы и т.д.)"
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "description": "Плохие предшественники"
+              },
+              "incompatible_families": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Семейства, с которыми нельзя чередовать"
+              },
+              "soil_requirements": {
+                "type": "object",
+                "properties": {
+                  "ph_range": {
+                    "type": "object",
+                    "properties": {
+                      "min": {
+                        "type": "number"
+                      },
+                      "max": {
+                        "type": "number"
+                      },
+                      "optimal": {
+                        "type": "number"
+                      }
+                    },
+                    "description": "Диапазон pH почвы"
+                  },
+                  "soil_type": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": ["легкая", "средняя", "тяжелая", "суглинистая", "песчаная", "черноземная"]
+                    },
+                    "description": "Предпочтительные типы почвы"
+                  },
+                  "organic_matter": {
+                    "type": "string",
+                    "enum": ["низкая", "средняя", "высокая"],
+                    "description": "Требования к содержанию органики"
+                  },
+                  "drainage": {
+                    "type": "string",
+                    "enum": ["плохой", "средний", "хороший"],
+                    "description": "Требования к дренажу"
+                  }
+                },
+                "description": "Требования к почве"
+              },
+              "nutrient_impact": {
+                "type": "object",
+                "properties": {
+                  "nitrogen": {
+                    "type": "string",
+                    "enum": ["сильное_истощение", "истощение", "нейтральное", "обогащение", "сильное_обогащение"],
+                    "description": "Влияние на запасы азота в почве"
+                  },
+                  "phosphorus": {
+                    "type": "string",
+                    "enum": ["истощение", "нейтральное", "обогащение"]
+                  },
+                  "potassium": {
+                    "type": "string",
+                    "enum": ["истощение", "нейтральное", "обогащение"]
+                  },
+                  "organic_matter": {
+                    "type": "string",
+                    "enum": ["истощение", "нейтральное", "обогащение"],
+                    "description": "Влияние на содержание органики"
+                  }
+                },
+                "description": "Влияние культуры на питательные вещества в почве"
+              },
+              "notes": {
+                "type": "string",
+                "description": "Дополнительные замечания"
+              },
+              "data_confidence": {
+                "type": "string",
+                "enum": ["высокая", "средняя", "низкая", "отсутствует"],
+                "description": "Уровень достоверности данных"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

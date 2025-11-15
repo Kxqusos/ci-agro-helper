@@ -1,0 +1,1 @@
+export { default as CenterDashboard } from './components/CenterDashboard';

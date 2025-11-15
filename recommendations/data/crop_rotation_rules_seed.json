@@ -1,0 +1,62 @@
+[
+  {
+    "crop_id": 1,
+    "return_interval_min": 2,
+    "return_interval_recommended": 3,
+    "incompatible_families": [
+      "poaceae"
+    ],
+    "notes": null,
+    "data_confidence": "высокая"
+  },
+  {
+    "crop_id": 19,
+    "return_interval_min": 2,
+    "return_interval_recommended": 4,
+    "incompatible_families": [
+      "fabaceae"
+    ],
+    "notes": "Горох фиксирует атмосферный азот (60-100 кг/га), улучшая плодородие для последующих культур",
+    "data_confidence": "высокая"
+  },
+  {
+    "crop_id": 37,
+    "return_interval_min": 4,
+    "return_interval_recommended": 7,
+    "incompatible_families": [
+      "asteraceae"
+    ],
+    "notes": "Подсолнечник - очень истощающая культура. Глубокая корневая система (до 2-3 м) извлекает питательные вещества из глубоких слоев. Обязателен длительный интервал возврата.",
+    "data_confidence": "высокая"
+  },
+  {
+    "crop_id": 47,
+    "return_interval_min": 2,
+    "return_interval_recommended": 3,
+    "incompatible_families": [
+      "solanaceae"
+    ],
+    "notes": "Картофель требователен к калию. Предпочитает слабокислые почвы.",
+    "data_confidence": "высокая"
+  },
+  {
+    "crop_id": 104,
+    "return_interval_min": 3,
+    "return_interval_recommended": 4,
+    "incompatible_families": [
+      "brassicaceae"
+    ],
+    "notes": "Капуста очень требовательна к азоту и органике. Предпочитает нейтральные или слабощелочные почвы.",
+    "data_confidence": "высокая"
+  },
+  {
+    "crop_id": 109,
+    "return_interval_min": 2,
+    "return_interval_recommended": 3,
+    "incompatible_families": [
+      "solanaceae"
+    ],
+    "notes": "Томаты требовательны к теплу и освещению. Не выносят кислых почв.",
+    "data_confidence": "высокая"
+  }
+]

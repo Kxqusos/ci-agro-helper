@@ -1,0 +1,124 @@
+{
+  "агрохимия": {
+    "чернозёмы": {
+      "humus_pct": "4–10",
+      "N_total_pct": "0.15–0.40",
+      "P_mgkg": "10–80",
+      "K_mgkg": "100–300",
+      "pH": "6.0–7.8"
+    },
+    "дерново-подзолистые": {
+      "humus_pct": "2–5",
+      "N_total_pct": "0.05–0.20",
+      "P_mgkg": "3–50",
+      "K_mgkg": "60–180",
+      "pH": "4.0–6.5"
+    },
+    "подзолистые": {
+      "humus_pct": "1–4",
+      "N_total_pct": "0.05–0.20",
+      "P_mgkg": "3–50",
+      "K_mgkg": "60–180",
+      "pH": "4.0–6.5"
+    },
+    "серые лесные": {
+      "humus_pct": "1.5–4",
+      "N_total_pct": "0.07–0.25",
+      "P_mgkg": "5–25",
+      "K_mgkg": "80–220",
+      "pH": "5.0–7.0"
+    },
+    "бурые лесные": {
+      "humus_pct": "1.5–4",
+      "N_total_pct": "0.07–0.25",
+      "P_mgkg": "5–25",
+      "K_mgkg": "80–220",
+      "pH": "5.0–7.0"
+    },
+    "каштановые": {
+      "humus_pct": "1.5–4",
+      "N_total_pct": "0.06–0.18",
+      "P_mgkg": "5–30",
+      "K_mgkg": "80–200",
+      "pH": "6.0–8.0"
+    },
+    "бурые полупустынные": {
+      "humus_pct": "0.5–2",
+      "N_total_pct": "0.03–0.12",
+      "P_mgkg": "2–15",
+      "K_mgkg": "50–150",
+      "pH": "7.0–8.5"
+    },
+    "полупустынные": {
+      "humus_pct": "0.5–2",
+      "N_total_pct": "0.03–0.12",
+      "P_mgkg": "2–15",
+      "K_mgkg": "50–150",
+      "pH": "7.0–8.5"
+    },
+    "аллювиальные": {
+      "humus_pct": "3–6",
+      "N_total_pct": "0.12–0.35",
+      "P_mgkg": "10–40",
+      "K_mgkg": "100–300",
+      "pH": "6.0–7.5"
+    },
+    "пойменные": {
+      "humus_pct": "3–6",
+      "N_total_pct": "0.12–0.35",
+      "P_mgkg": "10–40",
+      "K_mgkg": "100–300",
+      "pH": "6.0–7.5"
+    },
+    "горные": {
+      "humus_pct": "2–12",
+      "N_total_pct": "variable_low",
+      "P_mgkg": "variable_low",
+      "K_mgkg": "variable_med",
+      "pH": "5.0–7.0"
+    },
+    "вулканические": {
+      "humus_pct": "2–8",
+      "N_total_pct": "variable_med",
+      "P_mgkg": "variable_high",
+      "K_mgkg": "variable_high",
+      "pH": "5.5–7.5"
+    },
+    "мерзлотно-таёжные": {
+      "humus_pct": "3–10",
+      "N_total_pct": "low",
+      "P_mgkg": "low",
+      "K_mgkg": "low",
+      "pH": "4.0–6.0"
+    },
+    "тундровые": {
+      "humus_pct": "3–10",
+      "N_total_pct": "low",
+      "P_mgkg": "low",
+      "K_mgkg": "low",
+      "pH": "4.0–6.0"
+    },
+    "арктические": {
+      "humus_pct": "3–10",
+      "N_total_pct": "low",
+      "P_mgkg": "low",
+      "K_mgkg": "low",
+      "pH": "4.0–6.0"
+    },
+    "солонцы": {
+      "humus_pct": "0.5–2",
+      "N_total_pct": "very_low",
+      "P_mgkg": "very_low",
+      "K_mgkg": "low",
+      "pH": "8.0–9.0"
+    },
+    "солончаки": {
+      "humus_pct": "0.5–2",
+      "N_total_pct": "very_low",
+      "P_mgkg": "very_low",
+      "K_mgkg": "low",
+      "pH": "8.0–9.5"
+    }
+  }
+}
+

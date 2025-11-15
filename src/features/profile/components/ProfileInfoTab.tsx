@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Save, Calendar, MapPin } from "lucide-react";
+import { Save, Calendar, MapPin, Download, LogOut } from "lucide-react";
 import { UserProfile, ProfileUpdateData } from "../hooks/useProfile";
 
 interface ProfileInfoTabProps {
   user: UserProfile;
   onUpdate: (data: ProfileUpdateData) => Promise<{ success: boolean; error?: string }>;
+  onLogout?: () => void;
 }
 
-export default function ProfileInfoTab({ user, onUpdate }: ProfileInfoTabProps) {
+export default function ProfileInfoTab({ user, onUpdate, onLogout }: ProfileInfoTabProps) {
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState({
     username: user.username,
@@ -113,6 +114,37 @@ export default function ProfileInfoTab({ user, onUpdate }: ProfileInfoTabProps) 
               {user.fieldsHistory.filter(f => f.status === "active").length}
             </p>
           </div>
+
+          {/* Ссылка на скачивание приложения */}
+          <div className="bg-[#1A2E42] p-3 sm:p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-2">
+              <Download size={18} className="text-[#8BA4B8] sm:size-5" />
+              <span className="text-[#8BA4B8] text-sm sm:text-base">Мобильное приложение</span>
+            </div>
+            <p className="text-[#E8F4FF] font-semibold text-sm sm:text-base mb-2">
+              Попробуйте наше пробное приложение
+            </p>
+            <a 
+              href="https://expo.dev/accounts/unkno394/projects/AgroPlanner/builds/6966b6fe-c40e-441b-9cba-d74f400e02bb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#3388ff] text-white rounded-lg hover:bg-[#2970cc] transition-colors text-sm"
+            >
+              <Download size={16} />
+              Скачать приложение
+            </a>
+          </div>
+        </div>
+
+        {/* Кнопка выхода из системы */}
+        <div className="pt-4 border-t border-[#2D4A62]">
+          <button
+            onClick={onLogout}
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+          >
+            <LogOut size={18} />
+            Выйти из системы
+          </button>
         </div>
       </div>
     </div>

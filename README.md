@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AgroPlanner - Центр управления сельскохозяйственными полями и аналитики
 
-## Getting Started
+![Tailwind CSS](https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg) 
+![Next.js](https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg) 
+![TypeScript](https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg)
 
-First, run the development server:
+## Описание проекта
+AgroPlanner — это комплексное решение для цифровизации сельского хозяйства, объединяющее управление полями, спутниковый мониторинг, метеоданные и экономический анализ в единой веб-платформе.
 
+## Основные возможности
+
+### Управление полями
+- Интерактивное создание и редактирование полей на карте  
+- Автоматический расчет площади и периметра  
+- Привязка к регионам России с автоматическим определением типа почвы  
+- Детальная информация о каждом поле (культура, история, планируемые работы)  
+
+### Спутниковый мониторинг
+- Получение актуальных спутниковых снимков полей  
+- Расчет вегетационных индексов (NDVI, NDWI, MSI)  
+- Анализ состояния посевов и рекомендации  
+- Интеграция с Sentinel-2 и Planet Labs  
+
+### Погодная аналитика
+- Текущие метеорологические данные для каждого поля  
+- Прогнозы и агрометеорологические рекомендации  
+- Анализ условий для сельхозработ  
+
+### Экономический анализ
+- База данных сельхозкультур с ценами FAO  
+- Калькулятор рентабельности и затрат  
+- Анализ прибыльности культур  
+- Детализация затрат (семена, удобрения, топливо и т.д.)  
+
+## Технологии
+
+### Фронтенд
+- React.js с TypeScript  
+- Next.js 14+ (App Router)  
+- Tailwind CSS для стилизации  
+- Leaflet для картографии  
+- Lucide React для иконок  
+
+### Бэкенд
+- Next.js API Routes  
+- Custom Hooks для управления состоянием  
+- REST API для данных культур и цен  
+
+### Данные и интеграции
+- OpenStreetMap — картографические данные  
+- FAOSTAT — цены на сельхозпродукцию  
+- Sentinel-2 — спутниковые снимки  
+- OpenWeatherMap — метеоданные  
+- GeoJSON — границы регионов России  
+
+### Инфраструктура
+- Адаптивный дизайн для всех устройств  
+- Темная/светлая тема с системным определением  
+- JWT аутентификация  
+- Local Storage для кэширования  
+
+## Быстрый старт
+
+### Предварительные требования
+- Node.js 18+  
+- npm или yarn  
+
+### Установка и запуск
 ```bash
+# Клонирование репозитория
+git clone <repository-url>
+cd agroplanner
+
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

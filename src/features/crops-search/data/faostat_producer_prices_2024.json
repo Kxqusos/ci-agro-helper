@@ -1,0 +1,690 @@
+{
+  "data_source": "FAOSTAT",
+  "domain": "Producer Prices",
+  "country": "Russian Federation",
+  "year": 2024,
+  "currency_unit": "SLC",
+  "base_index_period": "2014-2016 = 100",
+  "products": [
+    {
+      "item_code": "01654",
+      "item_name": "Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",
+      "producer_price": 135075.2,
+      "price_index": 149.12,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01341",
+      "item_name": "Apples",
+      "producer_price": 26609.5,
+      "price_index": 140.29,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01343",
+      "item_name": "Apricots",
+      "producer_price": 50787.5,
+      "price_index": 144.95,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0115",
+      "item_name": "Barley",
+      "producer_price": 13274.8,
+      "price_index": 193.31,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01701",
+      "item_name": "Beans, dry",
+      "producer_price": 9164.8,
+      "price_index": 71.92,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01702",
+      "item_name": "Broad beans and horse beans, dry",
+      "producer_price": 10532.6,
+      "price_index": 82.65,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01243",
+      "item_name": "Broad beans and horse beans, green",
+      "producer_price": 21225.0,
+      "price_index": 138.61,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01192",
+      "item_name": "Buckwheat",
+      "producer_price": 36499.4,
+      "price_index": 201.37,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01212",
+      "item_name": "Cabbages",
+      "producer_price": 21059.6,
+      "price_index": 168.39,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01229",
+      "item_name": "Cantaloupes and other melons",
+      "producer_price": 5167.9,
+      "price_index": 136.57,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01251",
+      "item_name": "Carrots and turnips",
+      "producer_price": 17443.3,
+      "price_index": 136.65,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01447",
+      "item_name": "Castor oil seeds",
+      "producer_price": 12321.0,
+      "price_index": 115.85,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01213",
+      "item_name": "Cauliflowers and broccoli",
+      "producer_price": 28765.5,
+      "price_index": 140.53,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01199.90",
+      "item_name": "Cereals n.e.c.",
+      "producer_price": 15137.2,
+      "price_index": 223.88,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01344.02",
+      "item_name": "Cherries",
+      "producer_price": 50074.2,
+      "price_index": 144.7,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01373",
+      "item_name": "Chestnuts, in shell",
+      "producer_price": 404528.1,
+      "price_index": 148.41,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01703",
+      "item_name": "Chick peas, dry",
+      "producer_price": 9772.0,
+      "price_index": 76.68,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01691",
+      "item_name": "Chicory roots",
+      "producer_price": 10150.2,
+      "price_index": 84.73,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01232",
+      "item_name": "Cucumbers and gherkins",
+      "producer_price": 91988.9,
+      "price_index": 134.48,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01351.01",
+      "item_name": "Currants",
+      "producer_price": 111989.8,
+      "price_index": 150.92,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0232",
+      "item_name": "Eggs from other birds in shell, fresh, n.e.c.",
+      "producer_price": 95826.6,
+      "price_index": 136.92,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "26190.01",
+      "item_name": "Flax, processed but not spun",
+      "producer_price": 59882.7,
+      "price_index": 244.08,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01351.02",
+      "item_name": "Gooseberries",
+      "producer_price": 107931.5,
+      "price_index": 148.84,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01330",
+      "item_name": "Grapes",
+      "producer_price": 53771.8,
+      "price_index": 253.9,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01252",
+      "item_name": "Green garlic",
+      "producer_price": 77548.1,
+      "price_index": 123.25,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01374",
+      "item_name": "Hazelnuts, in shell",
+      "producer_price": 404305.5,
+      "price_index": 148.33,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01449.02",
+      "item_name": "Hempseed",
+      "producer_price": 187306.3,
+      "price_index": 123.56,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0231",
+      "item_name": "Hen eggs in shell, fresh",
+      "producer_price": 99172.8,
+      "price_index": 141.65,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01659",
+      "item_name": "Hop cones",
+      "producer_price": 2265238.1,
+      "price_index": 129.82,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21118.01",
+      "item_name": "Horse meat, fresh or chilled",
+      "producer_price": 103000.3,
+      "price_index": 127.16,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21118.01b",
+      "item_name": "Horse meat, fresh or chilled (biological)",
+      "producer_price": 130134.6,
+      "price_index": 125.31,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01704",
+      "item_name": "Lentils, dry",
+      "producer_price": 10016.7,
+      "price_index": 84.34,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01441",
+      "item_name": "Linseed",
+      "producer_price": 17508.3,
+      "price_index": 121.53,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01709.02",
+      "item_name": "Lupins",
+      "producer_price": 9318.2,
+      "price_index": 73.12,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0112",
+      "item_name": "Maize (corn)",
+      "producer_price": 13571.9,
+      "price_index": 185.07,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21117.01",
+      "item_name": "Meat of camels, fresh or chilled",
+      "producer_price": 123792.4,
+      "price_index": 115.74,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21111.01",
+      "item_name": "Meat of cattle with the bone, fresh or chilled",
+      "producer_price": 325051.7,
+      "price_index": 146.27,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21111.01b",
+      "item_name": "Meat of cattle with the bone, fresh or chilled (biological)",
+      "producer_price": 137209.7,
+      "price_index": 155.75,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21121",
+      "item_name": "Meat of chickens, fresh or chilled",
+      "producer_price": 128679.4,
+      "price_index": 142.19,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21121b",
+      "item_name": "Meat of chickens, fresh or chilled (biological)",
+      "producer_price": 97362.1,
+      "price_index": 140.92,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21116",
+      "item_name": "Meat of goat, fresh or chilled",
+      "producer_price": 226710.8,
+      "price_index": 132.3,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21116b",
+      "item_name": "Meat of goat, fresh or chilled (biological)",
+      "producer_price": 124762.5,
+      "price_index": 158.27,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21113.01",
+      "item_name": "Meat of pig with the bone, fresh or chilled",
+      "producer_price": 168641.2,
+      "price_index": 107.91,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21113.01b",
+      "item_name": "Meat of pig with the bone, fresh or chilled (biological)",
+      "producer_price": 112937.4,
+      "price_index": 116.4,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21114",
+      "item_name": "Meat of rabbits and hares, fresh or chilled",
+      "producer_price": 100348.8,
+      "price_index": 104.75,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21114b",
+      "item_name": "Meat of rabbits and hares, fresh or chilled (biological)",
+      "producer_price": 80531.3,
+      "price_index": 109.83,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21115",
+      "item_name": "Meat of sheep, fresh or chilled",
+      "producer_price": 346576.6,
+      "price_index": 174.01,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21115b",
+      "item_name": "Meat of sheep, fresh or chilled (biological)",
+      "producer_price": 124780.6,
+      "price_index": 158.3,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0118",
+      "item_name": "Millet",
+      "producer_price": 13874.2,
+      "price_index": 214.41,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01270",
+      "item_name": "Mushrooms and truffles",
+      "producer_price": 119989.6,
+      "price_index": 136.63,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01442",
+      "item_name": "Mustard seed",
+      "producer_price": 13548.0,
+      "price_index": 123.0,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02910",
+      "item_name": "Natural honey",
+      "producer_price": 287474.7,
+      "price_index": 122.61,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0117",
+      "item_name": "Oats",
+      "producer_price": 10708.8,
+      "price_index": 190.56,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01253.02",
+      "item_name": "Onions and shallots, dry (excluding dehydrated)",
+      "producer_price": 17956.5,
+      "price_index": 157.13,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01355.90",
+      "item_name": "Other berries and fruits of the genus vaccinium n.e.c.",
+      "producer_price": 173289.4,
+      "price_index": 164.58,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01359.90",
+      "item_name": "Other fruits, n.e.c.",
+      "producer_price": 28007.9,
+      "price_index": 140.01,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "21119.90",
+      "item_name": "Other meat of mammals, fresh or chilled",
+      "producer_price": 160856.2,
+      "price_index": 130.28,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01379.90",
+      "item_name": "Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",
+      "producer_price": 292530.2,
+      "price_index": 148.34,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01349.10",
+      "item_name": "Other pome fruits",
+      "producer_price": 56898.6,
+      "price_index": 189.09,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01709.90",
+      "item_name": "Other pulses n.e.c.",
+      "producer_price": 18078.7,
+      "price_index": 141.87,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01349.20",
+      "item_name": "Other stone fruits",
+      "producer_price": 67982.2,
+      "price_index": 138.77,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01290.90",
+      "item_name": "Other vegetables, fresh n.e.c.",
+      "producer_price": 16168.1,
+      "price_index": 141.17,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01345",
+      "item_name": "Peaches and nectarines",
+      "producer_price": 49990.5,
+      "price_index": 144.74,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01342.01",
+      "item_name": "Pears",
+      "producer_price": 26593.1,
+      "price_index": 140.06,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01705",
+      "item_name": "Peas, dry",
+      "producer_price": 17787.7,
+      "price_index": 153.37,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01242",
+      "item_name": "Peas, green",
+      "producer_price": 29750.4,
+      "price_index": 140.07,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01346",
+      "item_name": "Plums and sloes",
+      "producer_price": 51428.7,
+      "price_index": 145.2,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01510",
+      "item_name": "Potatoes",
+      "producer_price": 17346.1,
+      "price_index": 143.19,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01235",
+      "item_name": "Pumpkins, squash and gourds",
+      "producer_price": 5317.1,
+      "price_index": 139.44,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01342.02",
+      "item_name": "Quinces",
+      "producer_price": 27306.9,
+      "price_index": 142.09,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01443",
+      "item_name": "Rape or colza seed",
+      "producer_price": 38201.2,
+      "price_index": 217.72,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01353.01",
+      "item_name": "Raspberries",
+      "producer_price": 108424.8,
+      "price_index": 148.59,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02293",
+      "item_name": "Raw milk of camel",
+      "producer_price": 28460.2,
+      "price_index": 157.0,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02211",
+      "item_name": "Raw milk of cattle",
+      "producer_price": 32435.9,
+      "price_index": 156.75,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02292",
+      "item_name": "Raw milk of goats",
+      "producer_price": 28439.9,
+      "price_index": 156.89,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02291",
+      "item_name": "Raw milk of sheep",
+      "producer_price": 45173.6,
+      "price_index": 156.92,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0113",
+      "item_name": "Rice",
+      "producer_price": 24076.0,
+      "price_index": 148.73,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0116",
+      "item_name": "Rye",
+      "producer_price": 10939.5,
+      "price_index": 204.0,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01446",
+      "item_name": "Safflower seed",
+      "producer_price": 27758.4,
+      "price_index": 116.96,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "02941",
+      "item_name": "Shorn wool, greasy, including fleece-washed shorn wool",
+      "producer_price": 117737.7,
+      "price_index": 177.05,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0114",
+      "item_name": "Sorghum",
+      "producer_price": 23232.5,
+      "price_index": 130.11,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01344.01",
+      "item_name": "Sour cherries",
+      "producer_price": 52321.8,
+      "price_index": 147.57,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0141",
+      "item_name": "Soya beans",
+      "producer_price": 39336.2,
+      "price_index": 198.45,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01354",
+      "item_name": "Strawberries",
+      "producer_price": 108907.7,
+      "price_index": 148.14,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01801",
+      "item_name": "Sugar beet",
+      "producer_price": 3750.0,
+      "price_index": 142.99,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01445",
+      "item_name": "Sunflower seed",
+      "producer_price": 31812.1,
+      "price_index": 177.71,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01620",
+      "item_name": "Tea leaves",
+      "producer_price": 5557894.9,
+      "price_index": null,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01234",
+      "item_name": "Tomatoes",
+      "producer_price": 112010.0,
+      "price_index": 183.19,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01191",
+      "item_name": "Triticale",
+      "producer_price": 11321.8,
+      "price_index": null,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01929.02",
+      "item_name": "True hemp, raw or retted",
+      "producer_price": 27268.2,
+      "price_index": 161.5,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01970",
+      "item_name": "Unmanufactured tobacco",
+      "producer_price": 549902.5,
+      "price_index": 138.63,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01709.01",
+      "item_name": "Vetches",
+      "producer_price": 9093.3,
+      "price_index": 71.36,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01376",
+      "item_name": "Walnuts, in shell",
+      "producer_price": 404419.4,
+      "price_index": 148.38,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "01221",
+      "item_name": "Watermelons",
+      "producer_price": 37324.5,
+      "price_index": 571.72,
+      "unit": "SLC/tonne"
+    },
+    {
+      "item_code": "0111",
+      "item_name": "Wheat",
+      "producer_price": 13254.4,
+      "price_index": 162.61,
+      "unit": "SLC/tonne"
+    }
+  ],
+  "search_indices": {
+    "by_item_code": {},
+    "by_item_name": {},
+    "by_category": {
+      "cereals": ["0111", "0112", "0113", "0114", "0115", "0116", "0117", "0118", "01191", "01192", "01199.90"],
+      "vegetables": ["01212", "01213", "01221", "01229", "01232", "01234", "01235", "01242", "01243", "01251", "01252", "01253.02", "01270", "01290.90", "01510"],
+      "fruits": ["01330", "01341", "01342.01", "01342.02", "01343", "01344.01", "01344.02", "01345", "01346", "01349.10", "01349.20", "01351.01", "01351.02", "01353.01", "01354", "01355.90", "01359.90"],
+      "nuts": ["01373", "01374", "01376", "01379.90"],
+      "pulses": ["01701", "01702", "01703", "01704", "01705", "01709.01", "01709.02", "01709.90"],
+      "oilseeds": ["0141", "01441", "01442", "01443", "01445", "01446", "01447", "01449.02"],
+      "meat": ["21111.01", "21111.01b", "21113.01", "21113.01b", "21114", "21114b", "21115", "21115b", "21116", "21116b", "21117.01", "21118.01", "21118.01b", "21119.90", "21121", "21121b"],
+      "dairy_eggs": ["02211", "02291", "02292", "02293", "0231", "0232"],
+      "other": ["01620", "01654", "01659", "01691", "01801", "01929.02", "01970", "02910", "02941", "26190.01"]
+    }
+  }
+}

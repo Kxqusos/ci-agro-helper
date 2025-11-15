@@ -54,35 +54,35 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen bg-[#0F1F2F]">
         <Background />
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-500 z-50 relative"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-[#4ECDC4] z-50 relative"></div>
       </div>
     )
   }
 
   if (!user) {
     return (
-      <div className="flex justify-center items-center flex-col h-screen relative overflow-hidden">
+      <div className="flex justify-center items-center flex-col h-screen relative overflow-hidden bg-[#0F1F2F]">
         <Background />
         
         {error && (
-          <div className="absolute top-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded z-50">
+          <div className="absolute top-4 bg-[#DC2626] border border-[#B91C1C] text-white px-4 py-3 rounded z-50">
             {error}
           </div>
         )}
 
-        <div className={`container bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_14px_28px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.22)] relative overflow-hidden w-full max-w-4xl min-h-[600px] z-10 ${isRightPanelActive ? 'right-panel-active' : ''}`}>
+        <div className={`container bg-[#172B3E]/90 backdrop-blur-sm rounded-2xl shadow-[0_14px_28px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.22)] relative overflow-hidden w-full max-w-4xl min-h-[600px] z-10 border border-[#2D4A62] ${isRightPanelActive ? 'right-panel-active' : ''}`}>
           
           <div className="form-container sign-up-container">
             <form onSubmit={handleRegister} className="bg-transparent flex items-center justify-center flex-col p-12 h-full text-center">
-              <h1 className="font-bold text-2xl mb-4 text-gray-800">Регистрация</h1>
+              <h1 className="font-bold text-2xl mb-4 text-[#E8F4FF]">Регистрация</h1>
               
-              <span className="text-sm text-gray-600 mb-4"></span>
+              <span className="text-sm text-[#8BA4B8] mb-4"></span>
               <input 
                 type="text" 
                 placeholder="Имя" 
-                className="bg-white/80 border border-gray-200 py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="bg-[#0F1F2F] border border-[#2D4A62] text-[#E8F4FF] py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4ECDC4] focus:border-transparent placeholder-[#8BA4B8]"
                 value={registerData.name}
                 onChange={(e) => setRegisterData({...registerData, name: e.target.value})}
                 required
@@ -90,7 +90,7 @@ export default function Home() {
               <input 
                 type="email" 
                 placeholder="Электронная почта" 
-                className="bg-white/80 border border-gray-200 py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="bg-[#0F1F2F] border border-[#2D4A62] text-[#E8F4FF] py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4ECDC4] focus:border-transparent placeholder-[#8BA4B8]"
                 value={registerData.email}
                 onChange={(e) => setRegisterData({...registerData, email: e.target.value})}
                 required
@@ -98,7 +98,7 @@ export default function Home() {
               <input 
                 type="password" 
                 placeholder="Пароль" 
-                className="bg-white/80 border border-gray-200 py-3 px-4 mb-6 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="bg-[#0F1F2F] border border-[#2D4A62] text-[#E8F4FF] py-3 px-4 mb-6 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4ECDC4] focus:border-transparent placeholder-[#8BA4B8]"
                 value={registerData.password}
                 onChange={(e) => setRegisterData({...registerData, password: e.target.value})}
                 required
@@ -107,7 +107,7 @@ export default function Home() {
               <button 
                 type="submit"
                 disabled={loading}
-                className="rounded-2xl border border-green-600 bg-green-600 text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-green-700 hover:border-green-700 active:scale-95 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+                className="rounded-2xl border border-[#4ECDC4] bg-[#4ECDC4] text-[#0F1F2F] text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-[#45B8B0] hover:border-[#45B8B0] active:scale-95 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Создается аккаунт...' : 'Войти'}
               </button>
@@ -115,12 +115,12 @@ export default function Home() {
           </div>
           <div className="form-container sign-in-container">
             <form onSubmit={handleLogin} className="bg-transparent flex items-center justify-center flex-col p-12 h-full text-center">
-              <h1 className="font-bold text-2xl mb-4 text-gray-800">Войти</h1>
-              <span className="text-sm text-gray-600 mb-4"></span>
+              <h1 className="font-bold text-2xl mb-4 text-[#E8F4FF]">Войти</h1>
+              <span className="text-sm text-[#8BA4B8] mb-4"></span>
               <input 
                 type="email" 
                 placeholder="Электронная почта" 
-                className="bg-white/80 border border-gray-200 py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="bg-[#0F1F2F] border border-[#2D4A62] text-[#E8F4FF] py-3 px-4 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4ECDC4] focus:border-transparent placeholder-[#8BA4B8]"
                 value={loginData.email}
                 onChange={(e) => setLoginData({...loginData, email: e.target.value})}
                 required
@@ -128,7 +128,7 @@ export default function Home() {
               <input 
                 type="password" 
                 placeholder="Пароль" 
-                className="bg-white/80 border border-gray-200 py-3 px-4 mb-6 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="bg-[#0F1F2F] border border-[#2D4A62] text-[#E8F4FF] py-3 px-4 mb-6 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4ECDC4] focus:border-transparent placeholder-[#8BA4B8]"
                 value={loginData.password}
                 onChange={(e) => setLoginData({...loginData, password: e.target.value})}
                 required
@@ -136,7 +136,7 @@ export default function Home() {
               <button 
                 type="submit"
                 disabled={loading}
-                className="rounded-2xl border border-green-600 bg-green-600 text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-green-700 hover:border-green-700 active:scale-95 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+                className="rounded-2xl border border-[#4ECDC4] bg-[#4ECDC4] text-[#0F1F2F] text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-[#45B8B0] hover:border-[#45B8B0] active:scale-95 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Выполняется вход..' : 'Войти'}
               </button>
@@ -152,7 +152,7 @@ export default function Home() {
                 backgroundRepeat: 'no-repeat'
               }}
             >
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-10"></div>
+              <div className="absolute inset-0 bg-[#0F1F2F]/80 backdrop-blur-sm z-10"></div>
               
               <div className="overlay-panel overlay-left relative z-20">
                 <h1 className="text-3xl font-bold mb-4 text-white">Добро пожаловать!</h1>
@@ -161,7 +161,7 @@ export default function Home() {
                 </p>
                 <button 
                   onClick={() => setIsRightPanelActive(false)}
-                  className="rounded-2xl border-2 border-white bg-transparent text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-green-600 active:scale-95 focus:outline-none"
+                  className="rounded-2xl border-2 border-white bg-transparent text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#0F1F2F] active:scale-95 focus:outline-none"
                 >
                   Войти
                 </button>
@@ -173,7 +173,7 @@ export default function Home() {
                 </p>
                 <button 
                   onClick={() => setIsRightPanelActive(true)}
-                  className="rounded-2xl border-2 border-white bg-transparent text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-green-600 active:scale-95 focus:outline-none"
+                  className="rounded-2xl border-2 border-white bg-transparent text-white text-sm font-bold py-3 px-12 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#0F1F2F] active:scale-95 focus:outline-none"
                 >
                  Зарегистрироваться
                 </button>
@@ -300,9 +300,9 @@ export default function Home() {
     )
   }
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen bg-[#0F1F2F]">
       <Background />
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-500 z-50 relative"></div>
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-[#4ECDC4] z-50 relative"></div>
     </div>
   )
 }
